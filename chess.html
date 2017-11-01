@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    canvas {
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="chess"></canvas>
+  <script>
+    var canvas = document.getElementById("chess");
+    var context = canvas.getContext('2d');
+    var width = document.body.clientWidth;
+    var padding = 15;
+    var type = true;
+    var qipan = [];
+    var chessWidth = width - padding * 2;
+    var jiange = chessWidth / 14;
+    for (let i = 0; i < 15; i++) {
+      qipan[i] = [];
+      for (let j = 0; j < 15; j++) {
+        qipan[i][j] = 0;
+      }
+    }
+    canvas.width = width;
+    canvas.height = width;
+    var image = new Image();
+    image.src = "images/chess.jpg";
+    image.onload = function () {
+      context.drawImage(image, 0, 0, width, width);
+      drawLine();
+      canvas.onclick = function (e) {
+        var x = e.offsetX;
+        var y = e.offsetY;
+        var i = Math.floor(x / jiange);
+        var j = Math.floor(y / jiange);
+        if (qipan[i][j] == 0) {
+          drawChess(i, j, type);
+          type = !type;
+          if (type) {
+            qipan[i][j] = 1;
+          } else {
+            qipan[i][j] = 2;
+          }
+        }
+      }
+    }
+    function drawLine() {
+      context.lineWidth = 2;
+      context.strokeStyle = '#666';
+      context.strokeRect(padding, padding, chessWidth, chessWidth);
+      for (let i = 0; i < 15; i++) {
+        context.lineWidth = 1;
+        context.beginPath();
+        context.moveTo(padding + jiange * i, padding);
+        context.lineTo(padding + jiange * i, chessWidth + padding);
+        context.moveTo(padding, padding + jiange * i);
+        context.lineTo(chessWidth + padding, padding + jiange * i);
+        context.stroke();
+      }
+      drawArc(7, 7);
+      drawArc(3, 3);
+      drawArc(3, 11);
+      drawArc(11, 3);
+      drawArc(11, 11);
+    }
+
+    function drawArc(x, y) {
+      context.fillStyle = '#666';
+      context.beginPath();
+      context.arc(padding + jiange * x, padding + jiange * y, jiange / 8, 0, 2 * Math.PI);
+      context.closePath();
+      context.fill();
+    }
+
+    function drawChess(x, y, t) {
+      context.beginPath();
+      context.arc(padding + jiange * x, padding + jiange * y, jiange / 5 * 2, 0, 2 * Math.PI);
+      // context.closePath();
+      var gradent = context.createRadialGradient(padding + jiange * x + 2, padding + jiange * y - 2, padding, padding +
+        jiange * x + 2, padding + jiange * y - 2, 2);
+      if (t) {
+        gradent.addColorStop(0, '#0a0a0a');
+        gradent.addColorStop(1, '#636766');
+      } else {
+        gradent.addColorStop(0, '#d1d1d1');
+        gradent.addColorStop(1, '#f9f9f9');
+      }
+      context.fillStyle = gradent;
+      context.fill();
+    }
+  </script>
+</body>
+
+</html>

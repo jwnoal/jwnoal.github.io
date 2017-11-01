@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="drawFont"></canvas>
+  <script>
+    var canvas = document.getElementById("drawFont");
+    var context = canvas.getContext('2d');
+    var width = document.body.clientWidth;
+    var isMouseDown = false;
+    var lastWidth = -1;
+    var lastdian = {
+      x: 0,
+      y: 0
+    };
+    var lasttime = 0;
+    canvas.width = width;
+    canvas.height = width;
+    drawGrid();
+    canvas.onmousedown = function (e) {
+      e.preventDefault();
+      lasttime = new Date().getTime();
+      isMouseDown = true;
+      lastdian = {
+        x: e.clientX,
+        y: e.clientY
+      };
+    }
+    canvas.onmouseup = function (e) {
+      e.preventDefault();
+      isMouseDown = false;
+    }
+    canvas.onmouseout = function (e) {
+      e.preventDefault();
+      isMouseDown = false;
+    }
+    canvas.onmousemove = function (e) {
+      e.preventDefault();
+      if (isMouseDown) {
+        var currdian = {
+          x: e.clientX,
+          y: e.clientY
+        }
+        var currtime = new Date().getTime();
+        var s = calcDistance(currdian, lastdian);
+        var t = currtime - lasttime;
+        var lineWidth = calcLineWidth(t, s);
+        context.beginPath();
+        context.moveTo(lastdian.x, lastdian.y);
+        context.lineTo(currdian.x, currdian.y);
+        context.strokeStyle = '#333';
+        context.lineWidth = lineWidth;
+        context.lineCap = 'round';
+        context.lineJoin = 'round';
+        context.stroke();
+        lastdian = currdian;
+        lasttime = currtime;
+        lastWidth = lineWidth;
+      }
+    }
+
+    canvas.addEventListener("touchstart",function (e) {
+      e.preventDefault();
+      lasttime = new Date().getTime();
+      isMouseDown = true;
+      touch =e.touches[0];
+      lastdian = {
+        x: touch.pageX,
+        y: touch.pageY
+      };
+    })
+    canvas.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      isMouseDown = false;
+    })
+    canvas.addEventListener("touchmove", function (e) {
+      e.preventDefault();
+      if (isMouseDown) {
+        touch =e.touches[0];
+        var currdian = {
+          x: touch.pageX,
+          y: touch.pageY
+        }
+        var currtime = new Date().getTime();
+        var s = calcDistance(currdian, lastdian);
+        var t = currtime - lasttime;
+        var lineWidth = calcLineWidth(t, s);
+        context.beginPath();
+        context.moveTo(lastdian.x, lastdian.y);
+        context.lineTo(currdian.x, currdian.y);
+        context.strokeStyle = '#333';
+        context.lineWidth = lineWidth;
+        context.lineCap = 'round';
+        context.lineJoin = 'round';
+        context.stroke();
+        lastdian = currdian;
+        lasttime = currtime;
+        lastWidth = lineWidth;
+      }
+    })
+
+    function calcLineWidth(t, s) {
+      var v = s / t;
+      var resultLineWith;
+      if (v <= 0.1) {
+        resultLineWith = 30;
+      } else if (v >= 10) {
+        resultLineWith = 1;
+      } else {
+        resultLineWith = 30 - (v - 0.1) / (10 - 0.1) * (30 - 1);
+      }
+      if(lastWidth == -1){
+        return resultLineWith;
+      }else{
+      return lastWidth*2/3+resultLineWith*1/3;
+      }
+    }
+    //计算两点之间的距离
+    function calcDistance(loc1, loc2) {
+      return Math.sqrt((loc1.x - loc2.x) * (loc1.x - loc2.x) + (loc1.y - loc2.y) * (loc1.y - loc2.y));
+    }
+    //画背景
+    function drawGrid() {
+      context.save();
+      context.lineWidth = 8;
+      context.strokeStyle = '#A20909';
+      context.strokeRect(0, 0, width, width);
+      context.beginPath();
+      context.lineWidth = 1;
+      context.moveTo(0, 0);
+      context.lineTo(width, width);
+      context.moveTo(width, 0);
+      context.lineTo(0, width);
+      context.moveTo(0, width / 2);
+      context.lineTo(width, width / 2);
+      context.moveTo(width / 2, 0);
+      context.lineTo(width / 2, width);
+      context.stroke();
+      context.restore();
+    }
+  </script>
+</body>
+
+</html>
