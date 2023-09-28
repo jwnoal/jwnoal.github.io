@@ -13,6 +13,8 @@
     "@astrojs/mdx": "^1.1.0",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "astro": "^3.1.4"
+    "astro": "^3.1.4",
+    "astro-particles": "^2.10.0",
+    "tsparticles": "^2.12.0"
   }
 }
