@@ -2,7 +2,7 @@
 title: '常用的Sass'
 description: '常用的Sass'
 pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: 'https://cdn.jump.icu/blog/photo-1454165804606-c3d57bc86b40.jpeg?e=1695893969&token=kuB5U4N5PSSOqgf4GbFghXC_Bf19VLJkWswS4KlO:1RVepCAHYKL6_xa2Yv94JkGm9CY='
 ---
 
 ## Sass的说明

@@ -1,5 +1,5 @@
 {
-  "name": "soymilk",
+  "name": "extinct-ephemera",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,16 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.2",
-    "@astrojs/mdx": "^0.19.7",
-    "@astrojs/rss": "^2.4.3",
-    "@astrojs/sitemap": "^2.0.1",
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.9.3",
-    "tailwindcss": "^3.3.3"
-  },
-  "devDependencies": {
-    "prettier": "^3.0.0",
-    "prettier-plugin-astro": "^0.11.0"
+    "@astrojs/mdx": "^1.1.0",
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "astro": "^3.1.4"
   }
 }

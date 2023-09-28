@@ -2,7 +2,7 @@
 title: 'canvas实现刮奖效果'
 description: 'canvas实现刮奖效果'
 pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: 'https://cdn.jump.icu/blog/photo-1513542789411-b6a5d4f31634.jpeg?e=1695894097&token=kuB5U4N5PSSOqgf4GbFghXC_Bf19VLJkWswS4KlO:rDFFjySKoNX_dLYIISmNzbBIbho='
 ---
 
 ```js
