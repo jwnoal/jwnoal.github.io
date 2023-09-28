@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import ParticlesBlog from "../../components/Particles/ParticlesBlog.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -43,7 +44,7 @@ const posts = (await getCollection("blog")).sort(
         width: 100%;
       }
       ul li:first-child .title {
-        font-size: 2.369rem;
+        font-size: 2rem;
       }
       ul li img {
         margin-bottom: 0.5rem;
@@ -54,8 +55,10 @@ const posts = (await getCollection("blog")).sort(
       }
       .title {
         margin: 0;
-        color: rgb(var(--black));
+        color: rgb(var(--my-white));
         line-height: 1;
+        font-size: 1.5rem;
+
       }
       .date {
         margin: 0;
@@ -80,7 +83,7 @@ const posts = (await getCollection("blog")).sort(
           margin-bottom: 0;
         }
         ul li:first-child .title {
-          font-size: 1.563em;
+          font-size: 1.2em;
         }
       }
     </style>
@@ -112,5 +115,6 @@ const posts = (await getCollection("blog")).sort(
       </section>
     </main>
     <Footer />
+    <ParticlesBlog></ParticlesBlog>
   </body>
 </html>
