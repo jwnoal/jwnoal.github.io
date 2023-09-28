@@ -4,7 +4,7 @@ description: '移动端滑动穿透方案及demo'
 pubDate: '2023-07-23'
 heroImage: '
 
-https://cdn.jump.icu/blog/photo-1512486130939-2c4f79935e4f.jpeg?e=1695896361&token=kuB5U4N5PSSOqgf4GbFghXC_Bf19VLJkWswS4KlO:kaWoDJAp04fWYkI0cCT6hZGuSvw='
+https://cdn.jump.icu/blog/photo-1512486130939-2c4f79935e4f.jpeg'
 ---
 
 # 移动端滑动穿透方案及 demo

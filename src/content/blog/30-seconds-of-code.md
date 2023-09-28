@@ -2,7 +2,8 @@
 title: "30-seconds-of-code"
 description: "30-seconds-of-code"
 pubDate: "2023-07-23"
-heroImage: "https://cdn.jump.icu/blog/photo-1501747315-124a0eaca060.jpeg?e=1695896093&token=kuB5U4N5PSSOqgf4GbFghXC_Bf19VLJkWswS4KlO:Kduvwnlh2cGHm7Ggddj93V53t5Y="
+heroImage: "
+https://cdn.jump.icu/blog/photo-1450849608880-6f787542c88a.jpeg"
 ---
 
 ## 30 Seconds

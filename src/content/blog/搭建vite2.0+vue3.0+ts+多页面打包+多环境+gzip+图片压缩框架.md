@@ -3,7 +3,8 @@ title: '搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框�
 description: '搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框架'
 pubDate: '2023-07-23'
 heroImage: '
-https://cdn.jump.icu/blog/photo-1459257831348-f0cdd359235f.jpeg?e=1695896321&token=kuB5U4N5PSSOqgf4GbFghXC_Bf19VLJkWswS4KlO:VmdhT52bdrXnEAzNaVGcBRXNp8U='
+
+https://cdn.jump.icu/blog/photo-1459257831348-f0cdd359235f.jpeg'
 ---
 
 #### 首先安装vite
