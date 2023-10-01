@@ -5,8 +5,8 @@
  */
 
 :root {
-  --accent: #2337ff;
-  --accent-dark: #000d8a;
+  --accent: #15cff4;
+  --accent-dark: #0f497e;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
@@ -39,7 +39,7 @@ body {
   background: rgb(var(--my-blue));
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
+  /* color: rgb(var(--my-white)); */
   font-size: 20px;
   line-height: 1.7;
 }
@@ -48,7 +48,7 @@ main {
   max-width: calc(100% - 2em);
   margin: auto;
   padding: 3em 1em;
-  height: 600px;
+  height: auto;
 }
 h1,
 h2,
@@ -57,23 +57,23 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.5rem 0;
-  color: rgb(var(--black));
+  color: rgb(var(--my-white));
   line-height: 1.2;
 }
 h1 {
-  font-size: 3.052em;
+  font-size: 2rem;
 }
 h2 {
-  font-size: 2.441em;
+  font-size: 1.8rem;
 }
 h3 {
-  font-size: 1.953em;
+  font-size: 1.6rem;
 }
 h4 {
-  font-size: 1.563em;
+  font-size: 1.4rem;
 }
 h5 {
-  font-size: 1.25em;
+  font-size: 1rem;
 }
 strong,
 b {

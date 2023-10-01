@@ -58,7 +58,6 @@ const posts = (await getCollection("blog")).sort(
         color: rgb(var(--my-white));
         line-height: 1;
         font-size: 1.5rem;
-
       }
       .date {
         margin: 0;
@@ -91,6 +90,7 @@ const posts = (await getCollection("blog")).sort(
   <body>
     <Header />
     <main>
+      <ParticlesBlog />
       <section>
         <ul>
           {
@@ -115,6 +115,5 @@ const posts = (await getCollection("blog")).sort(
       </section>
     </main>
     <Footer />
-    <ParticlesBlog></ParticlesBlog>
   </body>
 </html>
