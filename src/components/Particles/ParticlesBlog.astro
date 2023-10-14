@@ -119,19 +119,21 @@ const options: ISourceOptions = {
 };
 ---
 
-<script>
-  import { type Container, type Engine, tsParticles } from "tsparticles-engine";
-  import { loadFull } from "tsparticles";
-  // the function name is the parameter passed to the init attribute
-  // required
-  // add the function to window is mandatory, it will be searched there
-  (window as any).particlesInit = async function (engine: Engine) {
-    await loadFull(engine);
-  };
-</script>
 <Particles
   class="tsparticles"
   id="tsparticles"
   options={options}
   init="particlesInit"
 />
+<script>
+  import { type Container, type Engine, tsParticles } from "tsparticles-engine";
+  import { loadFull } from "tsparticles";
+  // the function name is the parameter passed to the init attribute
+  // required
+  // add the function to window is mandatory, it will be searched there
+  console.log(2);
+  (window as any).particlesInit = async (engine: Engine) => {
+    console.log(1);
+    await loadFull(engine);
+  };
+</script>
