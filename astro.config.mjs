@@ -12,7 +12,7 @@ export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), sitemap(), vue(), react({
     include: ['**/react/*'],
-  })]
+  })],
   output: "server",
   adapter: vercel()
 });
