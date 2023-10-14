@@ -249,8 +249,16 @@ const options: ISourceOptions = {
   // the function name is the parameter passed to the init attribute
   // required
   // add the function to window is mandatory, it will be searched there
-  (window as any).particlesInit = async function (engine: Engine) {
+  window.particlesInit = async function (engine: Engine) {
+    // console.log("particlesInit");
     await loadFull(engine);
+  };
+
+  // the function name is the parameter passed to the loaded attribute
+  // optional
+  // add the function to window is mandatory, it will be searched there
+  window.particlesLoaded = function (container: Container) {
+    console.log("particlesLoaded callback");
   };
 </script>
 <Particles
