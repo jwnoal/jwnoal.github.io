@@ -8,7 +8,7 @@ import { getSiteURL } from "../../../utils/getSiteUrl";
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     const allPosts = await getCollection("blog");
     const uniqueTag = [...new Set(allPosts.map((p) => p.data.tags).flat())];
-    return uniqueTag.map((tag) => {
+    return uniqueTag.flatMap((tag) => {
         const filtered = allPosts.filter(
             (p) => p.data.tags.includes(tag) && !p.data.draft
         );

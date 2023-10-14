@@ -2,7 +2,7 @@
 import "../styles/components/AuthorCard.scss";
 import { site } from "../data/site";
 const a = site.author;
-import { Picture } from "@astrojs/image/components";
+import { Picture } from 'astro:assets';
 ---
 
 <article class="term card-author">
@@ -13,7 +13,6 @@ import { Picture } from "@astrojs/image/components";
             src={a.profilePic}
             class="rounded"
             widths={[75, 150]}
-            aspectRatio={1}
         />
         <div class="card-author--spec">
             <h3 style={`--length: ${a.firstname.length}ch;`}>

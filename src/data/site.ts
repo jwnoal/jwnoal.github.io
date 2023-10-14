@@ -1,4 +1,4 @@
-import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
+// import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
 // @ts-ignore
 import image from "../assets/social.png";
 // @ts-ignore
@@ -7,7 +7,7 @@ import pic from "../assets/ascii.png";
 export interface Author {
     firstname: string;
     bio: string;
-    profilePic: ImageMetadata;
+    profilePic: any;
     os?: string;
     shell?: string;
     lastname: string;
