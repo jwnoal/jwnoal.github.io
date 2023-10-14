@@ -1,9 +1,9 @@
 ---
 title: 'canvas实现刮奖效果'
-description: 'canvas实现刮奖效果'
-pubDate: '2023-07-23'
-heroImage: '
-https://cdn.jump.icu/blog/photo-1513542789411-b6a5d4f31634.jpeg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 ```js

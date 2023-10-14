@@ -1,8 +1,9 @@
 ---
 title: 'CocosCreator 修改打包后的默认加载界面'
-description: 'CocosCreator 修改打包后的默认加载界面'
-pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 以web-mobile发布网页端为例子

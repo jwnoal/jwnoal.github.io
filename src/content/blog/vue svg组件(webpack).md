@@ -1,8 +1,9 @@
 ---
 title: 'vue svg组件(webpack)'
-description: 'vue svg组件(webpack)'
-pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 #### 安装svg-sprite-loader

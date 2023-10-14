@@ -1,8 +1,9 @@
 ---
 title: 'cocos creator 新增打包自定义扩展'
-description: 'cocos creator 新增打包自定义扩展'
-pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 需求：打完包后需要将包打成zip,并新增时间戳在json中

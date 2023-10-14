@@ -1,8 +1,9 @@
 ---
 title: 'vue全局toast组件'
-description: 'vue全局toast组件'
-pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 记一个全局toast 组件

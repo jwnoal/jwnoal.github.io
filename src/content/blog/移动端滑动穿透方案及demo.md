@@ -1,10 +1,9 @@
 ---
 title: '移动端滑动穿透方案及demo'
-description: '移动端滑动穿透方案及demo'
-pubDate: '2023-07-23'
-heroImage: '
-
-https://cdn.jump.icu/blog/photo-1512486130939-2c4f79935e4f.jpeg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 # 移动端滑动穿透方案及 demo

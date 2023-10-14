@@ -1,8 +1,9 @@
 ---
 title: 'vue 路由返回不刷新'
-description: 'vue 路由返回不刷新'
-pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 router路由配置router/index.js

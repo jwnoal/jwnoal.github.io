@@ -1,23 +1,10 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-// import MyParticles from "../components/Particles/ParticlesHome.astro";
-import { BlogParticles } from "../components/react/BlogParticles.tsx";
-// import MyParticles from '../components/MyVueComponent.vue';
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header title={SITE_TITLE} />
-    <main>
-      <!-- <BlogParticles client:load/> -->
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout title={"Home"} description={"Home Page"}>
+    <Fragment slot="main">
+        <h1>Hello!</h1>
+        <article><p>This is my personal website.</p></article>
+    </Fragment>
+</BaseLayout>

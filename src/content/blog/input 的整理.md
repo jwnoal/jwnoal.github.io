@@ -1,8 +1,9 @@
 ---
 title: 'input 的整理'
-description: 'input 的整理'
-pubDate: '2023-07-23'
-heroImage: '/blog-placeholder-4.jpg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 #### input 设置长度

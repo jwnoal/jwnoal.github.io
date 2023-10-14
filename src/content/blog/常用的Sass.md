@@ -1,9 +1,9 @@
 ---
 title: '常用的Sass'
-description: '常用的Sass'
-pubDate: '2023-07-23'
-heroImage: '
-https://cdn.jump.icu/blog/photo-1454165804606-c3d57bc86b40.jpeg'
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 ## Sass 的说明

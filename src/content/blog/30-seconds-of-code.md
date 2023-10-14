@@ -1,9 +1,9 @@
 ---
 title: "30-seconds-of-code"
-description: "30-seconds-of-code"
-pubDate: "2023-07-23"
-heroImage: "
-https://cdn.jump.icu/blog/photo-1450849608880-6f787542c88a.jpeg"
+pubDate: 2022-07-01
+draft: false
+description: "This is the first post of my new Astro blog."
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 ## 30 Seconds
