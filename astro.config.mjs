@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-// import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/serverless";
 import vue from "@astrojs/vue";
 import react from "@astrojs/react";
 
@@ -11,6 +11,6 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), vue(), react({
     include: ['**/react/*'],
   })],
-  // output: "hybrid",
-  // adapter: vercel()
+  output: "server",
+  adapter: vercel()
 });
