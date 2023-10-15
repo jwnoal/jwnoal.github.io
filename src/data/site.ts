@@ -1,4 +1,3 @@
-// import type { ImageMetadata } from "@astrojs/image/dist/vite-plugin-astro-image";
 // @ts-ignore
 import image from "../assets/social.png";
 // @ts-ignore
@@ -25,7 +24,7 @@ export interface Site {
     siteName: string;
     title: string;
     description: string;
-    image: ImageMetadata;
+    image: any;
     twitterCreator: string;
     author: Author;
 }

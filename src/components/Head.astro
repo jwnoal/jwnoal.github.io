@@ -7,12 +7,13 @@ export interface Props {
     img?: string | ImageMetadata;
 }
 
-// import { getImage } from 'astro';
+import { getImage } from 'astro:assets';
 import SEO from "simple-astro-seo";
 import "../styles/base/_index.scss";
 import "../styles/components/_ui.scss";
 import { site } from "../data/site";
 import { getSiteURL } from "../utils/getSiteUrl";
+import { ViewTransitions } from "astro:transitions";
 
 const {
     title = site.title,
@@ -22,15 +23,15 @@ const {
     pageType = "article",
 } = Astro.props;
 
-// const image = await getImage({
-//     src: img,
-//     width: 1080,
-//     aspectRatio: 2,
-//     format: "png",
-//     alt: "",
-// });
+const image = await getImage({
+    src: img,
+    width: 1080,
+    aspectRatio: 2,
+    format: "png",
+    alt: "",
+});
 
-// const siteImg = getSiteURL(image.src as string, Astro.url).toString();
+const siteImg = getSiteURL(image.src as string, Astro.url).toString();
 ---
 
 <!-- Base meta tags -->
@@ -58,7 +59,7 @@ const {
 />
 <title>{title}</title>
 
-<!-- <SEO
+<SEO
     image={siteImg}
     title={title}
     description={description}
@@ -68,4 +69,6 @@ const {
         : canonicalURL.toString()}
     pageType={pageType}
     twitterHandle={site.twitterCreator}
-/> -->
+/>
+
+<ViewTransitions />
