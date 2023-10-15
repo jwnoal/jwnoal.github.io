@@ -41,8 +41,8 @@ import { Icon } from "astro-icon";
         }
 
         getSessionStorage(): void {
-            if (sessionStorage.getItem("theme")) {
-                this.theme = sessionStorage.getItem("theme") as string;
+            if (localStorage.getItem("theme")) {
+                this.theme = localStorage.getItem("theme") as string;
             } else if (
                 window.matchMedia("(prefers-color-scheme: dark)").matches
             ) {
@@ -60,7 +60,7 @@ import { Icon } from "astro-icon";
             );
             const target = e.target as HTMLInputElement;
             this.theme = target.value;
-            sessionStorage.setItem("theme", this.theme);
+            localStorage.setItem("theme", this.theme);
             this.changeTheme();
         }
 
