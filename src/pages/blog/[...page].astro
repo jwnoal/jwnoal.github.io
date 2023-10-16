@@ -12,13 +12,15 @@ import { getSiteURL } from "../../utils/getSiteUrl";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection("blog");
-//   过滤掉草稿并且根据时间排序
+  //   过滤掉草稿并且根据时间排序
   const posts = allPosts
     .filter((post) => !post.data.draft)
     .sort((a, b) => {
-      return new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf();
+      return (
+        new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+      );
     });
-  return paginate(posts, { pageSize: 30 });
+  return paginate(posts, { pageSize: 18 });
 }
 const { page } = Astro.props;
 const PageTitle = "Blog";
@@ -45,16 +47,12 @@ const desc = "liste des posts";
           <ul>
             {page.url.prev ? (
               <li class="btn">
-                <a href={getSiteURL(page.url.prev, Astro.site).toString()}>
-                  Previous
-                </a>
+                <a href={page.url.prev}>Previous</a>
               </li>
             ) : null}
             {page.url.next ? (
               <li class="btn">
-                <a href={getSiteURL(page.url.next, Astro.site).toString()}>
-                  Next
-                </a>
+                <a href={page.url.next}>Next</a>
               </li>
             ) : null}
           </ul>

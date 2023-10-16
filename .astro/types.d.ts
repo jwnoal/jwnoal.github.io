@@ -395,6 +395,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"配置astro markdown code 主题.md": {
+	id: "配置astro markdown code 主题.md";
+  slug: "配置astro-markdown-code-主题";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 
 	};
