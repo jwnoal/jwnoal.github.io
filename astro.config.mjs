@@ -11,7 +11,7 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), vue(), react({
     include: ['**/react/*'],
   })],
-  output: 'server',
+  output: 'hybrid',
   adapter: vercel(),
   markdown: {
     shikiConfig: {
