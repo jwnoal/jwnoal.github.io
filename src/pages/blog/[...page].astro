@@ -22,7 +22,7 @@ const desc = "liste des posts";
 ---
 
 <BaseLayout title={PageTitle} description={desc} canonicalURL={"blog"}>
-    <section slot="main" class="grid">
+    <section slot="main" class="grid blog">
         <h2 class="sr-only">List of blog posts</h2>
         {
             page.data.map(({ data, slug }) => (

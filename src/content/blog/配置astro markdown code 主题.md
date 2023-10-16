@@ -8,7 +8,7 @@ tags: ["astro", "markdown", "Shiki", "Prism"]
 
 在astro.config.mjs文件中配置markdown
 
-```mjs
+```js
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config

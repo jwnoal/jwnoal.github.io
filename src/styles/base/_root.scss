@@ -21,7 +21,7 @@
 @include font_face("HackRegular", $format: "woff");
 
 html {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 body {
@@ -99,11 +99,13 @@ body {
 .astro-code {
     padding: 0.8rem;
     padding-block-start: 1.6rem;
-    border-radius: 0.2rem;
+    border-radius: 0.8rem;
     position: relative;
     max-width: 100ch;
     margin: 1rem auto;
     text-align: left;
+    font-weight: bold;
+    // font-size: var(--fs-2);
     
     &::before {
         content: "";
@@ -155,3 +157,7 @@ body {
     margin-left: auto;
     text-align: center;
 }
+
+// a {
+//     color:rgb(55, 123, 135);
+// }
