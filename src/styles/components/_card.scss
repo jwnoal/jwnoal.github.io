@@ -10,6 +10,7 @@
         "title date"
         "content content"
         "tags tags";
+    text-align: left;
     &-link {
         position: absolute;
         inset: 0;
@@ -29,7 +30,6 @@
     &-content {
         grid-area: content;
         padding-block: 1em;
-        text-align: center;
     }
     &-tags {
         grid-area: tags;

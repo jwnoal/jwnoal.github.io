@@ -13,7 +13,7 @@ import { getSiteURL } from "../../utils/getSiteUrl";
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     const allPosts = await getCollection("blog");
     const posts = allPosts.filter((post) => !post.data.draft);
-    return paginate(posts, { pageSize: 9 });
+    return paginate(posts, { pageSize: 30 });
 }
 const { page } = Astro.props;
 const PageTitle = "Blog";
@@ -22,7 +22,7 @@ const desc = "liste des posts";
 ---
 
 <BaseLayout title={PageTitle} description={desc} canonicalURL={"blog"}>
-    <section slot="main" class="grid blog">
+    <section slot="main" class="grid">
         <h2 class="sr-only">List of blog posts</h2>
         {
             page.data.map(({ data, slug }) => (

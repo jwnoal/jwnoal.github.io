@@ -30,7 +30,7 @@ export interface Site {
 }
 
 export const site: Site = {
-    lang: "en",
+    lang: "cn",
     rssTitle: "Onadrog's blog posts",
     siteName: "Cmd_Theme",
     title: "Welcome to my personal website.",

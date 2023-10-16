@@ -1,3 +1,11 @@
+.myblog{
+    text-align: left;
+    max-width: 100ch;
+    a {
+        color:rgb(40, 164, 177);
+    }
+}
+
 .tag-link {
     z-index: 3;
     padding: 0.3em;
@@ -12,6 +20,12 @@
     &:focus-visible {
         color: hsl(var(--txtc));
         background-color: hsl(var(--base-lighter));
+        a {
+            color: hsl(var(--txtc));
+        }
+    }
+    a {
+        color: hsl(var(--base-darker));
     }
 }
 
