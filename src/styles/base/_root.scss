@@ -20,8 +20,12 @@
 @include font_face("HackRegular");
 @include font_face("HackRegular", $format: "woff");
 
+html {
+    font-size: 12px;
+}
+
 body {
-    font-size: var(--fs-0);
+    font-size: var(--fs-2);
     display: grid;
     grid-template-areas: "nav" "header" "main" "footer";
     place-items: center;
@@ -93,13 +97,14 @@ body {
 }
 
 .astro-code {
-    padding: 0.2rem;
+    padding: 0.8rem;
     padding-block-start: 1.6rem;
     border-radius: 0.2rem;
     position: relative;
     max-width: 100ch;
     margin: 1rem auto;
-
+    text-align: left;
+    
     &::before {
         content: "";
         position: absolute;

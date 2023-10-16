@@ -1,6 +1,4 @@
 ---
-
-
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Head, { type Props as headProps } from "../components/Head.astro";
@@ -9,26 +7,26 @@ import { site } from "../data/site";
 import ParticlesBlog from "../components/Particles/ParticlesBlog.astro";
 
 export interface Props extends headProps {
-    className?: string;
+  className?: string;
 }
 
 const { className = "container", ...head } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={site.lang}>
-    <head>
-        <Head {...head} />
-    </head>
-    <body>
-        <ParticlesBlog />
-        <slot name="header">
-            <CmdHeader title={head.title} />
-        </slot>
-        <Navigation />
-        <main class={className} id="main">
-            <slot name="main"><slot /></slot>
-        </main>
-        <Footer />
-    </body>
+  <head>
+    <Head {...head} />
+  </head>
+  <body>
+    <ParticlesBlog />
+    <slot name="header">
+      <CmdHeader title={head.title} />
+    </slot>
+    <Navigation />
+    <main class={className} id="main">
+      <slot name="main"><slot /></slot>
+    </main>
+    <Footer />
+  </body>
 </html>

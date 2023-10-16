@@ -1,18 +1,20 @@
+---
+title: '配置astro markdown code 主题'
+pubDate: 2023-10-16
+draft: false
+description: "配置astro markdown code 主题"
+tags: ["astro", "markdown", "Shiki", "Prism"]
+---
+
+在astro.config.mjs文件中配置markdown
+
+```mjs
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import vercel from "@astrojs/vercel/serverless";
-import vue from "@astrojs/vue";
-import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jump.icu',
-  integrations: [mdx(), sitemap(), vue(), react({
-    include: ['**/react/*'],
-  })],
-  output: "hybrid",
-  adapter: vercel(),
+  integrations: [],
   markdown: {
     shikiConfig: {
       // 选择 Shiki 内置的主题（或添加你自己的主题）
@@ -27,3 +29,6 @@ export default defineConfig({
     },
   },
 });
+```
+
+[文档链接](https://docs.astro.build/zh-cn/guides/markdown-content/#%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE)

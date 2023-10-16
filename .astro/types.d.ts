@@ -360,6 +360,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"我的错题.md": {
+	id: "我的错题.md";
+  slug: "我的错题";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框架.md": {
 	id: "搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框架.md";
   slug: "搭建vite20vue30ts多页面打包多环境gzip图片压缩框架";
