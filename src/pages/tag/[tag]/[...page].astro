@@ -3,7 +3,6 @@ import Card from "../../../components/Card.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import type { Page, GetStaticPathsOptions } from "astro";
 import { type CollectionEntry, getCollection } from "astro:content";
-import { getSiteURL } from "../../../utils/getSiteUrl";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection("blog");
