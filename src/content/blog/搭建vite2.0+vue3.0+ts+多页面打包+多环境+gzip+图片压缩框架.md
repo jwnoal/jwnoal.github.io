@@ -3,7 +3,7 @@ title: '搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框�
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["vite", "vue", "ts"]
 ---
 
 #### 首先安装vite

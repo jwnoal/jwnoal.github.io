@@ -3,7 +3,7 @@ title: 'input 的整理'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["h5", "input", "js"]
 ---
 
 #### input 设置长度

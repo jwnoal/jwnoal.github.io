@@ -3,7 +3,7 @@ title: 'cocos creator 快速替换所有字体'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["cocos creator"]
 ---
 
 1. 首先将带系统字体的label拉出prefab 将prefab放进代码编辑器

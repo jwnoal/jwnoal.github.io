@@ -3,7 +3,7 @@ title: "30-seconds-of-code"
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["js"]
 ---
 
 ## 30 Seconds

@@ -3,7 +3,7 @@ title: 'cocos creator 新增打包自定义扩展'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["cocos creator"]
 ---
 
 需求：打完包后需要将包打成zip,并新增时间戳在json中

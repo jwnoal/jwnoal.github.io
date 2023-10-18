@@ -3,7 +3,7 @@ title: '移动端滑动穿透方案及demo'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["h5",'js']
 ---
 
 # 移动端滑动穿透方案及 demo

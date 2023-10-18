@@ -3,7 +3,7 @@ title: 'matter.js实现重力小球'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["js", "matter.js"]
 ---
 
 ```js

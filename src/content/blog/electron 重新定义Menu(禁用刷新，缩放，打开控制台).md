@@ -3,7 +3,7 @@ title: 'electron 重新定义Menu(禁用刷新，缩放，打开控制台)'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["electron"]
 ---
 
 ```js

@@ -3,19 +3,19 @@ title: 'vue全局toast组件'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["vue"]
 ---
 
 记一个全局toast 组件
 
 main.ts
-```
+```ts
 import Toast from "./components/toast/index"; //全局组件
 app.config.globalProperties.$toast = Toast.msg;
 ```
 
 新建global.d.ts  （为了this.$toast 的时候不报错）
-```
+```ts
 import "@vue/runtime-core";
 declare module "@vue/runtime-core" {
   interface ComponentCustomProperties {

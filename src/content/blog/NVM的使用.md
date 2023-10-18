@@ -3,7 +3,7 @@ title: 'NVM的使用'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["nvm"]
 ---
 
 ## NVM是什么?

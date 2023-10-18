@@ -3,7 +3,7 @@ title: '配置astro markdown code 主题'
 pubDate: 2023-10-16
 draft: false
 description: "配置astro markdown code 主题"
-tags: ["astro", "markdown", "Shiki", "Prism"]
+tags: ["astro", "markdown", "Shiki"]
 ---
 
 在astro.config.mjs文件中配置markdown
