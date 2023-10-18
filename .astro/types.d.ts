@@ -360,6 +360,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"微信聊天机器人.md": {
+	id: "微信聊天机器人.md";
+  slug: "微信聊天机器人";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "我的错题.md": {
 	id: "我的错题.md";
   slug: "我的错题";

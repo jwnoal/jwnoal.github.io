@@ -1,14 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import type { Page, GetStaticPathsOptions } from "astro";
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blog");
 const uniqueTag = [...new Set(allPosts.map((p) => p.data.tags).flat())];
 ---
 
 <BaseLayout
-  title={`tag`}
+  title={`Tag`}
   description={`All the tags used in posts.`}
   className={"grid"}
 >

@@ -1,0 +1,27 @@
+---
+type Props = {
+  page: Page<CollectionEntry<"blog">>;
+};
+
+import type { Page } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import SearchBar from "../../components/react/SearchBar";
+
+// Retrieve all articles
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+const searchList = posts.map(({ data, slug }) => ({
+  title: data.title,
+  url: `/blog/${slug}`,
+}));
+
+const PageTitle = "Search";
+const desc = "Search Blog";
+---
+
+<BaseLayout title={PageTitle} description={desc} className={"grid"}>
+  <Fragment slot="main">
+    <SearchBar client:load searchList={searchList} />
+  </Fragment>
+</BaseLayout>

@@ -1,5 +1,6 @@
 ---
 // import { getSiteURL } from "../utils/getSiteUrl";
+import Icon from "astro-icon";
 import CrtSwitch from "./CrtSwitch.astro";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 ---
@@ -10,15 +11,18 @@ import ThemeSwitcher from "./ThemeSwitcher.astro";
   <CrtSwitch />
   <ul class="navigation-list">
     <li class="navigation-list--links">
-      <a rel="prefetch" href='/'>Home</a>
+      <a rel="prefetch" href="/">Home</a>
     </li>
     <li class="navigation-list--links">
-      <a rel="prefetch" href='/blog'>Blog</a
-      >
+      <a rel="prefetch" href="/blog">Blog</a>
     </li>
     <li class="navigation-list--links">
-      <a rel="prefetch" href='/tag'>Tag</a
-      >
+      <a rel="prefetch" href="/tag">Tag</a>
+    </li>
+    <li class="navigation-list--links">
+      <a rel="prefetch" href="/search">
+        <Icon name="eva:search-outline" size={18} aria-hidden="true" class="light" />
+      </a>
     </li>
   </ul>
 </nav>
