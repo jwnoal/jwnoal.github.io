@@ -34,10 +34,11 @@ export default function SearchBar({ searchList }: Props) {
     setTitleArr(posts);
   }
   const iptStyle = {
+    width: '24rem',
     background: "transparent",
     border: "1px solid #3d7387",
     "border-radius": "12px",
-    padding: "5px",
+    padding: "5px 10px",
     color: "#3d7387",
     "margin-bottom": "20px",
     outline: "none",

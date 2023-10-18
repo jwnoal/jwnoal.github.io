@@ -8,8 +8,6 @@ export type Props = Omit<CollectionEntry<"blog">["data"], "draft"> & {
     url: string;
 };
 const { title, url, description, tags, pubDate } = Astro.props;
-console.log(url);
-
 ---
 
 <article class="card term">
