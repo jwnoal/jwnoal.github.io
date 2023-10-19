@@ -6,7 +6,8 @@ type Props = {
 import type { Page } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
-import SearchBar from "../../components/react/SearchBar";
+// import SearchBar from "../../components/react/SearchBar";
+import SearchBar from "../../components/svelte/SearchBar.svelte";
 
 // Retrieve all articles
 const posts = await getCollection("blog", ({ data }) => !data.draft);

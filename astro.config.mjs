@@ -5,18 +5,20 @@ import sitemap from '@astrojs/sitemap';
 import vue from "@astrojs/vue";
 import react from "@astrojs/react";
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jump.icu',
   integrations: [mdx(), sitemap(), vue(), react({
-    include: ['**/react/*'],
-  })],
+    include: ['**/react/*']
+  }), svelte()],
   // output: 'hybrid',
   // adapter: vercel(),
   markdown: {
     shikiConfig: {
       theme: 'one-dark-pro',
-      wrap: true,
-    },
-  },
+      wrap: true
+    }
+  }
 });
