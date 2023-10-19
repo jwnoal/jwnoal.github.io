@@ -15,10 +15,10 @@
     --spacing: 3rem;
 }
 
-// @include font_face("HackBold", $weight: 700);
-// @include font_face("HackBold", $weight: 700, $format: "woff");
-// @include font_face("HackRegular");
-// @include font_face("HackRegular", $format: "woff");
+@include font_face("HackBold", $weight: 700);
+@include font_face("HackBold", $weight: 700, $format: "woff");
+@include font_face("HackRegular");
+@include font_face("HackRegular", $format: "woff");
 
 html {
     font-size: 14px;
