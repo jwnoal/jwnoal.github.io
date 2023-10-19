@@ -5,36 +5,38 @@ import Head from "../components/Head.astro";
 import Navigation from "../components/Navigation.astro";
 import TagNav from "../components/TagNav.astro";
 import { site } from "../data/site";
+import ParticlesBlog from "../components/Particles/ParticlesBlog.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 const { title, description, tags, pubDate } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={site.lang}>
-    <head>
-        <Head title={title} description={description} />
-    </head>
-    <body>
-        <Navigation />
-        <main id="main" class="container myblog" transition:animate="slide">
-            <h1>{title}</h1>
-            <div class="blog-metadata">
-                <TagNav {tags} />
-                <p class="pubDate">
-                    <time datetime={pubDate.toString()}
-                        >{
-                            new Date(pubDate).toLocaleString(site.lang, {
-                                dateStyle: "medium",
-                            })
-                        }</time
-                    >
-                </p>
-            </div>
-            <article>
-                <slot />
-            </article>
-        </main>
-        <Footer />
-    </body>
+  <head>
+    <Head title={title} description={description} />
+  </head>
+  <body>
+    <Navigation />
+    <main id="main" class="container myblog" transition:animate="slide">
+      <h1>{title}</h1>
+      <div class="blog-metadata">
+        <TagNav {tags} />
+        <p class="pubDate">
+          <time datetime={pubDate.toString()}
+            >{
+              new Date(pubDate).toLocaleString(site.lang, {
+                dateStyle: "medium",
+              })
+            }</time
+          >
+        </p>
+      </div>
+      <article>
+        <slot />
+      </article>
+    </main>
+    <Footer />
+    <ParticlesBlog />
+  </body>
 </html>

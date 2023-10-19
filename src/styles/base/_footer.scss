@@ -1,5 +1,8 @@
+astro-particles {
+    display: none;
+}
 .footer {
-    // grid-area: footer;
+    grid-area: footer;
     text-align: center;
     display: grid;
     gap: 0.5em;
