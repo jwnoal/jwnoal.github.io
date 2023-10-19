@@ -30,7 +30,7 @@
   <input
     bind:value={inputValue}
     type="text"
-    placeholder="请输入内容..."
+    placeholder="请输入您要搜索的博客标题..."
     on:input={handleChange}
   />
   <ul>
@@ -46,11 +46,14 @@
   input {
     width: 24rem;
     background: transparent;
-    border: 1px solid #3d7387;
+    border: 1px solid #0bdf8a;
     border-radius: 12px;
     padding: 5px 10px;
-    color: #3d7387;
+    color: #0bdf8a;
     margin-bottom: 20px;
     outline: none;
+  }
+  input::placeholder{
+    color: #ddd;
   }
 </style>

@@ -5,41 +5,28 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
-    <address class="footer-contacts">
-        <a
-            class="footer-links--github"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            aria-label="github"
-            href="https://github.com/jwnoal/jwnoal.github.io"
-        >
-            <span class="sr-only">github</span>
-            <Icon name="github" size={18} aria-hidden="true" />
-        </a>
-    </address>
-    <p class="footer-links">
-        <a
-            class="footer-links--rss"
-            href={getSiteURL("rss.xml", Astro.site).toString()}
-            target="_blank"
-            ><span class="sr-only">RSS Feed</span>
-            <Icon name="rss" size={18} aria-hidden="true" />
-        </a>
-    </p>
-    <p class="footer-copyright">
-        <span> © 2022 soymilk博客 浙ICP备2021019273号-1 </span>
-        <span class="footer-copyright--theme"
-            ><a
-                href="https://github.com/onadrog/cmd_theme"
-                rel="nofollow noopener noreferrer"
-                target="_blank">cmd_theme</a
-            > made with <span aria-hidden="true">&#9829;</span><span
-                class="sr-only">love</span
-            > by <a
-                href="https://github.com/onadrog"
-                rel="nofollow noopener noreferrer"
-                target="_blank">Sébastien Gordano</a
-            ></span
-        >
-    </p>
+  <address class="footer-contacts">
+    <a
+      class="footer-links--github"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+      aria-label="github"
+      href="https://github.com/jwnoal/jwnoal.github.io"
+    >
+      <span class="sr-only">github</span>
+      <Icon name="github" size={18} aria-hidden="true" />
+    </a>
+  </address>
+  <p class="footer-links">
+    <a
+      class="footer-links--rss"
+      href={getSiteURL("rss.xml", Astro.site).toString()}
+      target="_blank"
+      ><span class="sr-only">RSS Feed</span>
+      <Icon name="rss" size={18} aria-hidden="true" />
+    </a>
+  </p>
+  <p class="footer-copyright">
+    <span> © 2022 soymilk博客 浙ICP备2021019273号-1</span>
+  </p>
 </footer>
