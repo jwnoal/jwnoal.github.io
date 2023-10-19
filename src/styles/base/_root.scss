@@ -13,12 +13,28 @@
     --fs-5: clamp(1.87rem, calc(1.76rem + 0.44vw), 2.29rem);
 
     --spacing: 3rem;
+
+    --red: 6, 96%, 59%;
+    --green: 61, 66%, 44%;
+    --yellow: 42, 95%, 58%;
 }
 
 // @include font_face("HackBold", $weight: 700);
 @include font_face("HackBold", $weight: 700, $format: "woff");
 // @include font_face("HackRegular");
 @include font_face("HackRegular", $format: "woff");
+
+.red {
+    color: hsl(var(--red));
+}
+
+.green {
+    color: hsl(var(--green));
+}
+
+.yellow {
+    color: hsl(var(--yellow));
+}
 
 html {
     font-size: 14px;
