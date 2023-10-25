@@ -1,0 +1,14 @@
+---
+import Demo from "../../components/vue/Demo.vue";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title={`Vue`}
+  description={`Vue Demo.`}
+  className={"grid"}
+>
+  <Fragment slot="main">
+    <Demo client:load/>
+  </Fragment>
+</BaseLayout>

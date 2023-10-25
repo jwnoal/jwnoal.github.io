@@ -190,231 +190,252 @@ declare module 'astro:content' {
   slug: "30-seconds-of-code";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "3500个常用字.md": {
 	id: "3500个常用字.md";
   slug: "3500个常用字";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "CocosCreator 修改打包后的默认加载界面.md": {
 	id: "CocosCreator 修改打包后的默认加载界面.md";
   slug: "cocoscreator-修改打包后的默认加载界面";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "MessageBus 单例.md": {
 	id: "MessageBus 单例.md";
   slug: "messagebus-单例";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "NVM的使用.md": {
 	id: "NVM的使用.md";
   slug: "nvm的使用";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "Svelte的写法记录.md": {
 	id: "Svelte的写法记录.md";
   slug: "svelte的写法记录";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "canvas实现刮奖效果.md": {
 	id: "canvas实现刮奖效果.md";
   slug: "canvas实现刮奖效果";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "cocos creator 快速替换所有字体.md": {
 	id: "cocos creator 快速替换所有字体.md";
   slug: "cocos-creator-快速替换所有字体";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "cocos creator 新增打包自定义扩展.md": {
 	id: "cocos creator 新增打包自定义扩展.md";
   slug: "cocos-creator-新增打包自定义扩展";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "cocos creator模拟点击.md": {
 	id: "cocos creator模拟点击.md";
   slug: "cocos-creator模拟点击";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "cocos 滑动屏幕更改相机位置.md": {
 	id: "cocos 滑动屏幕更改相机位置.md";
   slug: "cocos-滑动屏幕更改相机位置";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "electron 重新定义Menu(禁用刷新，缩放，打开控制台).md": {
 	id: "electron 重新定义Menu(禁用刷新，缩放，打开控制台).md";
   slug: "electron-重新定义menu禁用刷新缩放打开控制台";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"github上重要的js仓库集合.md": {
+	id: "github上重要的js仓库集合.md";
+  slug: "github上重要的js仓库集合";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "h5 页面失焦判断.md": {
 	id: "h5 页面失焦判断.md";
   slug: "h5-页面失焦判断";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "input 的整理.md": {
 	id: "input 的整理.md";
   slug: "input-的整理";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "js工具.md": {
 	id: "js工具.md";
   slug: "js工具";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"js的一些好用的库.md": {
+	id: "js的一些好用的库.md";
+  slug: "js的一些好用的库";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "matter.js实现重力小球.md": {
 	id: "matter.js实现重力小球.md";
   slug: "matterjs实现重力小球";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "ts实现Window自定义方法不报错.md": {
 	id: "ts实现Window自定义方法不报错.md";
   slug: "ts实现window自定义方法不报错";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue css变量.md": {
 	id: "vue css变量.md";
   slug: "vue-css变量";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue svg组件(webpack).md": {
 	id: "vue svg组件(webpack).md";
   slug: "vue-svg组件webpack";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue 不定高度瀑布流组件.md": {
 	id: "vue 不定高度瀑布流组件.md";
   slug: "vue-不定高度瀑布流组件";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue 组件递归调用自己.md": {
 	id: "vue 组件递归调用自己.md";
   slug: "vue-组件递归调用自己";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue 路由返回不刷新.md": {
 	id: "vue 路由返回不刷新.md";
   slug: "vue-路由返回不刷新";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue3.0的多种写法，你喜欢哪种呢？.md": {
 	id: "vue3.0的多种写法，你喜欢哪种呢？.md";
   slug: "vue30的多种写法你喜欢哪种呢";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue全局toast组件.md": {
 	id: "vue全局toast组件.md";
   slug: "vue全局toast组件";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "常用的Sass.md": {
 	id: "常用的Sass.md";
   slug: "常用的sass";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "微信聊天机器人.md": {
 	id: "微信聊天机器人.md";
   slug: "微信聊天机器人";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "我的错题.md": {
 	id: "我的错题.md";
   slug: "我的错题";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框架.md": {
 	id: "搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框架.md";
   slug: "搭建vite20vue30ts多页面打包多环境gzip图片压缩框架";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "移动端滑动穿透方案及demo.md": {
 	id: "移动端滑动穿透方案及demo.md";
   slug: "移动端滑动穿透方案及demo";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "节流与防抖.md": {
 	id: "节流与防抖.md";
   slug: "节流与防抖";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"英文字母数字标点符号.md": {
+	id: "英文字母数字标点符号.md";
+  slug: "英文字母数字标点符号";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "近乎完美的横向弹幕.md": {
 	id: "近乎完美的横向弹幕.md";
   slug: "近乎完美的横向弹幕";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "配置astro markdown code 主题.md": {
 	id: "配置astro markdown code 主题.md";
   slug: "配置astro-markdown-code-主题";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "面试题.md": {
 	id: "面试题.md";
   slug: "面试题";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -426,5 +447,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = typeof import("../src/content/config");
+	type ContentConfig = never;
 }

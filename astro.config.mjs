@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 import vercel from "@astrojs/vercel/serverless";
 import vue from "@astrojs/vue";
 import react from "@astrojs/react";
-
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
