@@ -5,8 +5,8 @@
   {{ obj.c }}
   {{ calculateBooksMessage() }}
 </template>
+
 <script setup>
-import { promise } from "astro/zod";
 import { ref, computed, onMounted, nextTick } from "vue";
 const count = ref(1);
 setTimeout(() => {
@@ -35,5 +35,4 @@ function calculateBooksMessage() {
 }
 
 await nextTick();
-
 </script>
