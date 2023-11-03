@@ -14,9 +14,9 @@ wx.getUserInfo 接口获取用户昵称头像将被收回
 [文档地址](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/userProfile.html)
 
 所以我在小程序首页进行引导：  
-![图片](https://cdn.jump.icu/blog/20231103174238.png)  
+![图片](https://cdn.jump.icu/blog/20231103182100.png)
 点击进入小程序，进行弹框：  
-![图片](https://cdn.jump.icu/blog/20231103175511.png)
+![图片](https://cdn.jump.icu/blog/20231103182141.png)
 
 弹框的代码：
 
