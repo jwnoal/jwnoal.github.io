@@ -318,6 +318,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"uniapp开发的微信小程序获取头像昵称.md": {
+	id: "uniapp开发的微信小程序获取头像昵称.md";
+  slug: "uniapp开发的微信小程序获取头像昵称";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "vue css变量.md": {
 	id: "vue css变量.md";
   slug: "vue-css变量";
@@ -374,6 +381,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"使用chatgpt生成图片.md": {
+	id: "使用chatgpt生成图片.md";
+  slug: "使用chatgpt生成图片";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "在博客中在线编辑vue.mdx": {
 	id: "在博客中在线编辑vue.mdx";
   slug: "在博客中在线编辑vue";
