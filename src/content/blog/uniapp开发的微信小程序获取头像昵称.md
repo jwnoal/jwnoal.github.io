@@ -1,6 +1,6 @@
 ---
 title: "uniapp开发的微信小程序获取头像昵称"
-pubDate: 2023-10-30
+pubDate: 2023-11-03
 draft: false
 description: "uniapp开发的微信小程序获取头像昵称"
 tags: ["uniapp", "微信小程序"]
