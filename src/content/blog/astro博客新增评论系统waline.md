@@ -38,7 +38,7 @@ npm i -D @waline/api recaptcha-v3
 
 ```vue
 <template>
-  <div ref="waline" id="waline" class="mydiv"></div>
+  <div ref="waline" id="waline"></div>
 </template>
 
 <script setup lang="ts">
