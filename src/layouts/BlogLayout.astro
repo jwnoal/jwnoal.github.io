@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation.astro";
 import TagNav from "../components/TagNav.astro";
 import { site } from "../data/site";
 import ParticlesBlog from "../components/Particles/ParticlesBlog.astro";
+import Waline from "../components/vue/Waline.vue";
 
 type Props = CollectionEntry<"blog">["data"];
 const { title, description, tags, pubDate } = Astro.props;
@@ -17,6 +18,7 @@ const { title, description, tags, pubDate } = Astro.props;
     <Head title={title} description={description} />
   </head>
   <body>
+    <ParticlesBlog />
     <Navigation />
     <main id="main" class="container myblog" transition:animate="slide">
       <h1>{title}</h1>
@@ -36,7 +38,7 @@ const { title, description, tags, pubDate } = Astro.props;
         <slot />
       </article>
     </main>
+    <Waline title={title} client:load />
     <Footer />
-    <ParticlesBlog />
   </body>
 </html>

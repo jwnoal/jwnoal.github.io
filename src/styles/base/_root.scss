@@ -43,7 +43,7 @@ html {
 body {
     font-size: var(--fs-2);
     display: grid;
-    grid-template-areas: "nav" "header" "main" "footer";
+    grid-template-areas: "nav" "header" "main" "mydiv" "footer";
     place-items: center;
     background-color: hsl(var(--base));
     color: hsl(var(--txtc));
@@ -52,6 +52,10 @@ body {
     > main {
         grid-area: main;
     }
+}
+
+.mydiv {
+    grid-area: mydiv;
 }
 
 ::-webkit-scrollbar {
