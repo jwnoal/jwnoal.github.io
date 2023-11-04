@@ -8,7 +8,7 @@ import "@waline/client/dist/waline.css";
 import { ref, onMounted, defineProps } from "vue";
 
 interface Props {
-  title: string
+  title: string;
 }
 
 const waline = ref(null);
