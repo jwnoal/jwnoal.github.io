@@ -78,3 +78,7 @@ import Waline from "../components/vue/Waline.vue";
 const { title } = Astro.props;
 <Waline title={title} client:load />;
 ```
+
+解决vercel域名被墙问题，使用自定义域名：  
+
+将 A 记录从 76.76.21.21 改成 76.223.126.88 官方建议将 cname 从 cname.vercel-dns.com 修改为 cname-china.vercel-dns.com
