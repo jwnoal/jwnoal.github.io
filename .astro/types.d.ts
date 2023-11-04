@@ -227,6 +227,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"astro博客新增评论系统waline.md": {
+	id: "astro博客新增评论系统waline.md";
+  slug: "astro博客新增评论系统waline";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "canvas实现刮奖效果.md": {
 	id: "canvas实现刮奖效果.md";
   slug: "canvas实现刮奖效果";
