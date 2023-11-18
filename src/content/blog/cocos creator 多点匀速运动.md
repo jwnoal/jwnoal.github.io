@@ -1,0 +1,30 @@
+---
+title: 'cocos creator 多点匀速运动'
+pubDate: 2023-11-18
+draft: false
+description: "cocos creator 多点匀速运动"
+tags: ["cocos creator"]
+---
+
+```
+export function AniMove(boss: cc.Node, lineChildren: cc.Node[], callback) {
+  const speed = 300;
+  cc.tween(boss)
+    .to(getDistance(boss, lineChildren[0]) / speed, {
+      x: lineChildren[0].x,
+      y: lineChildren[0].y,
+    })
+    .to(getDistance(lineChildren[0], lineChildren[1]) / speed, {
+      x: lineChildren[1].x,
+      y: lineChildren[1].y,
+    })
+    .call(() => {
+      callback && callback();
+    })
+    .start();
+}
+
+export function getDistance(node1: cc.Node, node2: cc.Node) {
+  return node1.position.sub(node2.position).mag();
+}
+```
