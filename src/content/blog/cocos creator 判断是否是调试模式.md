@@ -6,6 +6,6 @@ description: "cocos creator判断是否是调试模式"
 tags: ["cocos creator"]
 ---
 
-```
+```js
 CC_DEBUG
 ```

@@ -8,7 +8,7 @@ tags: ["cocos creator"]
 
 节点中添加Sprite,PolygonCollider  
 
-```
+```js
 const worldPoints = node.getComponent(cc.PolygonCollider).world.points;
 const randomPoint = this.getRandomPointInPolygon(worldPoints);
 console.log(randomPoint);

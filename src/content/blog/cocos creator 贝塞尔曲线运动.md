@@ -6,7 +6,7 @@ description: "cocos creator贝塞尔曲线运动"
 tags: ["cocos creator"]
 ---
 
-```
+```js
 const { ccclass, property } = cc._decorator;
 
 @ccclass

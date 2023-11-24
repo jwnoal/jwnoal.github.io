@@ -6,7 +6,7 @@ description: "cocos creator 多点匀速运动"
 tags: ["cocos creator"]
 ---
 
-```
+```js
 export function AniMove(boss: cc.Node, lineChildren: cc.Node[], callback) {
   const speed = 300;
   cc.tween(boss)

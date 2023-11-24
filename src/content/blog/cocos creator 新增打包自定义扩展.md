@@ -15,7 +15,7 @@ main.js 为入口函数
 
 main.js
 
-```
+```js
 "use strict";
 const { exec } = require("child_process");
 const path = require("path");
