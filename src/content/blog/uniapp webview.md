@@ -1,20 +1,20 @@
 ---
-title: 'uniapp webview'
+title: 'uniapp webview与h5交互'
 pubDate: 2023-11-18
 draft: false
-description: "uniapp webview"
+description: "uniapp webview与h5交互"
 tags: ["uniapp"]
 ---
 
-```
+```js
 <template>
 	<view>
 		<web-view
 			ref="webView"
-			style="background-color: #333"
-			:webview-styles="webviewStyles"
 			class="web"
-			:src="url"
+			:src="src"
+			style="background: #2b335e"
+			:webview-styles="webviewStyles"
 			@message="handleMessage"
 		></web-view>
 	</view>
@@ -24,10 +24,11 @@ tags: ["uniapp"]
 export default {
 	data() {
 		return {
+			currentWebview: null,
 			wv: null,
-			url: '',
+			src: '',
 			webviewStyles: {
-				background: 'rbg(48,57,102)',
+				background: 'rgb(43 51 94)',
 			},
 		};
 	},
@@ -40,9 +41,9 @@ export default {
 	onLoad(options) {
 		console.log('===onLoad===');
 		if (options && options.url) {
-			this.url = options.url;
+			this.src = options.url;
 			// this.$store.commit('setWebviewStatus', 1);
-			console.log('打开的页面是：', this.url);
+			console.log('打开的页面是：', this.src);
 		}
 	},
 	onUnload() {
@@ -51,11 +52,11 @@ export default {
 	onReady() {
 		console.log('===onReady===');
 		// #ifdef APP-PLUS
-		var currentWebview = this.$scope.$getAppWebview(); //此对象相当于html5plus里的plus.webview.currentWebview()。在uni-app里vue页面直接使用plus.webview.currentWebview()无效
+		this.currentWebview = this.$scope.$getAppWebview(); //此对象相当于html5plus里的plus.webview.currentWebview()。在uni-app里vue页面直接使用plus.webview.currentWebview()无效
 		setTimeout(() => {
-			this.wv = currentWebview.children()[0];
+			this.wv = this.currentWebview.children()[0];
 			console.log('wv1', this.wv);
-		}, 0); //如果是页面初始化调用时，需要延时一下
+		}, 200); //如果是页面初始化调用时，需要延时一下
 		// #endif
 	},
 	onShow() {
@@ -64,22 +65,39 @@ export default {
 
 	methods: {
 		handleMessage(evt) {
-			console.log('evt.detail==>', evt.detail);
-			console.log('wv2==>', this.wv);
-			switch (evt.detail.data[0].actionName) {
+			if (!this.wv) {
+				console.err('没有wv');
+				this.wv = this.currentWebview.children()[0];
+				if (!this.wv) {
+					this.$mHelper.toast(`handleMessage error:${this.wv}`);
+					return;
+				}
+			}
+			// console.log('evt.detail==>', evt.detail);
+			// console.log('wv2==>', this.wv);
+			const actionName = evt.detail.data[0].actionName;
+			const callBackFunctionName = evt.detail.data[0].callBackFunctionName;
+			const params = evt.detail.data[0].params;
+			switch (actionName) {
 				case 'uni_getCommonHeader':
 					this.wv.evalJS(
-						"window_uni_getCommonHeader('" +
-							JSON.stringify(this.$http.config) +
-							"')"
+						`${callBackFunctionName}(${JSON.stringify(this.$http.config)})`
 					);
 					break;
 				case 'uni_openPage':
-					console.log('打开新的webview', evt.detail.data[0].params.url);
 					uni.navigateTo({
-						url:
-							'/pages/webview/subWebview?url=' + evt.detail.data[0].params.url,
+						url: '/pages/webview/subWebview?url=' + params.url,
 					});
+					break;
+				case 'uni_request':
+					this.$http
+						.post(params.url, params.data)
+						.then((res) => {
+							this.wv.evalJS(`${callBackFunctionName}(${JSON.stringify(res)})`);
+						})
+						.catch((err) => {
+							this.$mHelper.toast(`${params.url}:${err}`);
+						});
 					break;
 				default:
 					break;
@@ -90,12 +108,11 @@ export default {
 </script>
 
 <style lang="scss" scoped></style>
-
 ```
 
 ### h5 部分  
 pMessage.ts
-```
+``` js
 import * as uni from "./uni.webview.1.5.4.js";
 uni.getEnv(function (res) {
   console.log("当前环境：" + JSON.stringify(res));
@@ -103,12 +120,17 @@ uni.getEnv(function (res) {
 
 export const pMessage = (name, params) => {
   return new Promise((resolve) => {
-    window[`window_${name}`] = (res) => {
+    const windowName = `window_${name}_${params?.name}_${new Date().getTime()}`;
+    // console.log("发送：", params.url || name);
+    window[windowName] = (res) => {
+      window[windowName] = null;
+      // console.log("收到：", params.url || name, res);
       resolve(res);
     };
     uni.postMessage({
       data: {
         actionName: name,
+        callBackFunctionName: windowName,
         params: params,
       },
     });
