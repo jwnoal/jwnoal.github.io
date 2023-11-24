@@ -1,5 +1,5 @@
 ---
-title: 'cocos 滑动屏幕更改相机位置'
+title: 'cocos creator 滑动屏幕更改相机位置'
 pubDate: 2022-07-01
 draft: false
 description: "This is the first post of my new Astro blog."
