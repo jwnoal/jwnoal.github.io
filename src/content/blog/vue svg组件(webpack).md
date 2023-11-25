@@ -2,7 +2,7 @@
 title: 'vue svg组件(webpack)'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "vue svg组件(webpack)"
 tags: ["vue", "svg"]
 ---
 

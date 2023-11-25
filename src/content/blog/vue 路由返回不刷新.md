@@ -2,7 +2,7 @@
 title: 'vue 路由返回不刷新'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "vue 路由返回不刷新"
 tags: ["vue", "router"]
 ---
 

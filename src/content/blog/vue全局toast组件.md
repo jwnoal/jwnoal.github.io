@@ -2,7 +2,7 @@
 title: 'vue全局toast组件'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "vue全局toast组件"
 tags: ["vue"]
 ---
 

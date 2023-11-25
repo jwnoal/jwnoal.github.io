@@ -2,7 +2,7 @@
 title: 'vue3.0的多种写法，你喜欢哪种呢？'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "vue3.0的多种写法，你喜欢哪种呢？"
 tags: ["vue"]
 ---
 

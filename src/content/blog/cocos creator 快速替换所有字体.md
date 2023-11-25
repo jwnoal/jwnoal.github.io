@@ -2,7 +2,7 @@
 title: 'cocos creator 快速替换所有字体'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "cocos creator 快速替换所有字体"
 tags: ["cocos creator"]
 ---
 

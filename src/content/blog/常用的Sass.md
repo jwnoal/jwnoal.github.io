@@ -2,7 +2,7 @@
 title: '常用的Sass'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "常用的Sass"
 tags: ["sass"]
 ---
 

@@ -2,7 +2,7 @@
 title: 'js工具'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "js工具"
 tags: ["js"]
 ---
 

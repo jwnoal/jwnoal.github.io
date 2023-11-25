@@ -2,7 +2,7 @@
 title: 'CocosCreator 修改打包后的默认加载界面'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "CocosCreator 修改打包后的默认加载界面"
 tags: ["cocos creator"]
 ---
 

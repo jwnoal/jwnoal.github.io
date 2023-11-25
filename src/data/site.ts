@@ -31,8 +31,8 @@ export interface Site {
 
 export const site: Site = {
     lang: "zh",
-    rssTitle: "Onadrog's blog posts",
-    siteName: "Cmd_Theme",
+    rssTitle: "soymilk blog posts",
+    siteName: "jump.icu",
     title: "Welcome to my personal website.",
     description:
         "This is my personal website, where I post news and some other cool stuff.",
@@ -43,12 +43,12 @@ export const site: Site = {
         profilePic: pic,
         shell: "Zsh",
         bio: "I'm a web developer who loves making stuff and woodworking.",
-        firstname: "Sébastien",
-        lastname: "Gordano",
+        firstname: "jw",
+        lastname: "noal",
         socials: [
             {
                 name: "github",
-                link: "https://github.com/onadrog",
+                link: "https://github.com/jwnoal/jwnoal.github.io",
             },
         ],
     },

@@ -2,7 +2,7 @@
 title: 'cocos creator 新增打包自定义扩展'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "cocos creator 新增打包自定义扩展"
 tags: ["cocos creator"]
 ---
 

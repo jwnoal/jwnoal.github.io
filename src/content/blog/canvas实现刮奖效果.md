@@ -2,7 +2,7 @@
 title: 'canvas实现刮奖效果'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "canvas实现刮奖效果"
 tags: ["js", "canvas"]
 ---
 

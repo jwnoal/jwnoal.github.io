@@ -2,7 +2,7 @@
 title: 'vue css变量'
 pubDate: 2022-07-01
 draft: false
-description: "This is the first post of my new Astro blog."
+description: "vue css变量"
 tags: ["vue", "css"]
 ---
 
