@@ -241,6 +241,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"charles 激活码计算器.md": {
+	id: "charles 激活码计算器.md";
+  slug: "charles-激活码计算器";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cocos creator 判断是否是调试模式.md": {
+	id: "cocos creator 判断是否是调试模式.md";
+  slug: "cocos-creator-判断是否是调试模式";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cocos creator 多点匀速运动.md": {
+	id: "cocos creator 多点匀速运动.md";
+  slug: "cocos-creator-多点匀速运动";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "cocos creator 快速替换所有字体.md": {
 	id: "cocos creator 快速替换所有字体.md";
   slug: "cocos-creator-快速替换所有字体";
@@ -255,16 +276,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"cocos creator模拟点击.md": {
-	id: "cocos creator模拟点击.md";
-  slug: "cocos-creator模拟点击";
+"cocos creator 模拟点击.md": {
+	id: "cocos creator 模拟点击.md";
+  slug: "cocos-creator-模拟点击";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"cocos 滑动屏幕更改相机位置.md": {
-	id: "cocos 滑动屏幕更改相机位置.md";
-  slug: "cocos-滑动屏幕更改相机位置";
+"cocos creator 滑动屏幕更改相机位置.md": {
+	id: "cocos creator 滑动屏幕更改相机位置.md";
+  slug: "cocos-creator-滑动屏幕更改相机位置";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cocos creator 获取不规则图形中的随机一个点.md": {
+	id: "cocos creator 获取不规则图形中的随机一个点.md";
+  slug: "cocos-creator-获取不规则图形中的随机一个点";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cocos creator 贝塞尔曲线运动.md": {
+	id: "cocos creator 贝塞尔曲线运动.md";
+  slug: "cocos-creator-贝塞尔曲线运动";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -325,9 +360,16 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"uniapp开发的微信小程序获取头像昵称.md": {
-	id: "uniapp开发的微信小程序获取头像昵称.md";
-  slug: "uniapp开发的微信小程序获取头像昵称";
+"uniapp webview.md": {
+	id: "uniapp webview.md";
+  slug: "uniapp-webview";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"uniapp 开发的微信小程序获取头像昵称.md": {
+	id: "uniapp 开发的微信小程序获取头像昵称.md";
+  slug: "uniapp-开发的微信小程序获取头像昵称";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -402,6 +444,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"创建与查看ssh.md": {
+	id: "创建与查看ssh.md";
+  slug: "创建与查看ssh";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"判断机型.md": {
+	id: "判断机型.md";
+  slug: "判断机型";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"原生js XMLHttpRequest.md": {
+	id: "原生js XMLHttpRequest.md";
+  slug: "原生js-xmlhttprequest";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "在博客中在线编辑vue.mdx": {
 	id: "在博客中在线编辑vue.mdx";
   slug: "在博客中在线编辑vue";
@@ -416,6 +479,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"微信小程序报错fail url not in domain list.md": {
+	id: "微信小程序报错fail url not in domain list.md";
+  slug: "微信小程序报错fail-url-not-in-domain-list";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "微信聊天机器人.md": {
 	id: "微信聊天机器人.md";
   slug: "微信聊天机器人";
@@ -426,6 +496,13 @@ declare module 'astro:content' {
 "我的错题.md": {
 	id: "我的错题.md";
   slug: "我的错题";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"搜索引擎收录地址.md": {
+	id: "搜索引擎收录地址.md";
+  slug: "搜索引擎收录地址";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
