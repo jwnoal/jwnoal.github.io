@@ -1,5 +1,5 @@
 ---
-// import { getSiteURL } from "../utils/getSiteUrl";
+import { getSiteURL } from "../utils/getSiteUrl";
 import Icon from "astro-icon";
 ---
 
@@ -7,18 +7,23 @@ import Icon from "astro-icon";
   <a href="#main" class="hidden-menu">Skip to main content</a>
   <ul class="navigation-list">
     <li class="navigation-list--links">
-      <a rel="prefetch" href="/">Home</a>
+      <a rel="prefetch" href={getSiteURL("/", Astro.site).toString()}>Home</a>
     </li>
     <li class="navigation-list--links">
-      <a rel="prefetch" href="/blog">Blog</a>
+      <a rel="prefetch" href={getSiteURL("blog", Astro.site).toString()}>Blog</a>
     </li>
     <li class="navigation-list--links">
-      <a rel="prefetch" href="/tag">Tag</a>
+      <a rel="prefetch" href={getSiteURL("tag", Astro.site).toString()}>Tag</a>
     </li>
     <li class="navigation-list--links">
-      <a rel="prefetch" href="/search">
-        <Icon name="eva:search-outline" size={18} aria-hidden="true" class="light" />
-        Search
+      <a rel="prefetch" href={getSiteURL("search", Astro.site).toString()}>
+        <Icon
+          name="eva:search-outline"
+          size={18}
+          aria-hidden="true"
+          class="light"
+        />
+         Search
       </a>
     </li>
     <!-- <li class="navigation-list--links">
