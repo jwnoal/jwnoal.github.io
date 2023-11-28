@@ -30,12 +30,11 @@
     "tsparticles": "^2.12.0",
     "vue": "^3.3.4",
     "vue-live": "^2.5.4",
-    "vue-router": "^4.2.5"
-  },
-  "devDependencies": {
+    "vue-router": "^4.2.5",
     "@waline/api": "^1.0.0-alpha.1",
     "@waline/client": "^3.0.0-alpha.1",
     "recaptcha-v3": "^1.10.0",
     "sass": "^1.69.3"
-  }
+  },
+  "devDependencies": {}
 }
