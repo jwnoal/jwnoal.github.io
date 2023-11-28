@@ -332,6 +332,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"js 判断机型.md": {
+	id: "js 判断机型.md";
+  slug: "js-判断机型";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "js工具.md": {
 	id: "js工具.md";
   slug: "js工具";
