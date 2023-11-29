@@ -1,5 +1,5 @@
 ---
-title: 'cocos creator 坐标转换'
+title: "cocos creator 坐标转换"
 pubDate: 2023-11-29
 draft: false
 description: "cocos creator 坐标转换"
@@ -18,4 +18,9 @@ export function convertPoint(
   // 将一个点转换到节点 (局部) 空间坐标系
   return target.convertToNodeSpaceAR(wPoint);
 }
+```
+
+调用：  
+```js
+convertPoint(area.parent, area.x, area.y, this.node);
 ```
