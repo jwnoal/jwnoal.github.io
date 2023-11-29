@@ -7,35 +7,51 @@ tags: ["cocos creator"]
 ---
 
 ```js
+import { randomInt } from "../Utils/util";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export class BezierMovement extends cc.Component {
-  start() {
-    this.runBezierAction();
-  }
+  start() {}
 
   runBezierAction() {
     const time = 0.1;
 
     // 贝塞尔曲线的控制点
+    const num = randomInt(-30, 30);
     const controlPoints = [
       cc.v2(0, 0), // 起点
-      cc.v2(100, 100), // 控制点1
-      cc.v2(200, 0), // 终点
+      cc.v2(num, randomInt(100, 200)), // 控制点1
+      cc.v2(num * 2, randomInt(-20, 20)), // 终点
     ];
 
     // 创建一个贝塞尔曲线动作
     const bezierTo = cc.bezierTo(time, controlPoints);
 
-    // 执行动作
-    const action = cc.sequence(
-      bezierTo
+    // 创建一个缩放动作
+    const scaleTo = cc.scaleTo(time, 0.3, 0.3);
+
+    // 创建一个透明度动作
+    const fadeTo = cc.fadeTo(time / 2, 255);
+
+    // 创建一个序列动作
+    const sequence = cc.sequence(
+      cc.spawn(bezierTo, scaleTo, fadeTo),
       cc.callFunc(this.onBezierActionEnd, this)
     );
 
-    // 将动作附加到目标节点
-    this.node.runAction(action);
+    // 创建一个Tween对象并设置目标节点
+    const tween = cc.tween(this.node);
+
+    // 设置初始属性
+    tween.set({ scale: 0.2, opacity: 100 });
+
+    // 添加序列动作到Tween中
+    tween.then(sequence);
+
+    // 启动Tween
+    tween.start();
   }
 
   onBezierActionEnd() {
