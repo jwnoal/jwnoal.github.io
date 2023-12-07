@@ -32,7 +32,7 @@ wx.config({
 ```js
 document.querySelector("#loginBtn").addEventListener("click", function () {
   console.log("跳转authorize");
-  window.location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${wxConfig.appId}&redirect_uri=${url}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`;
+  window.location.href = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${wxConfig.appId}&redirect_uri=${window.location.href}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`;
 });
 ```
 
