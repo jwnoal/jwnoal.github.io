@@ -7,7 +7,10 @@ tags: ["wechat"]
 ---
 
 1. 引入 微信 jssdk
+
+```js
 <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+```
 
 2. wx.config
 
@@ -33,6 +36,6 @@ document.querySelector("#loginBtn").addEventListener("click", function () {
 });
 ```
 
-4. 安卓在微信无法直接下载apk，需要引导在默认浏览器打开
+4. 安卓在微信无法直接下载 apk，需要引导在默认浏览器打开
 
-5. ios打开app store链接，需要注意的是，扫二维码可以唤起，如果是聊天链接则不能唤起，（重定向后的链接带有code，从默认浏览器打开，会打开原始页面，没带参数）
+5. ios 打开 app store 链接，需要注意的是，扫二维码可以唤起，如果是聊天链接则不能唤起，（重定向后的链接带有 code，从默认浏览器打开，会打开原始页面，没带参数）
