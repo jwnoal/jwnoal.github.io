@@ -8,7 +8,7 @@ tags: ["uniapp"]
 
 ```js
 <template>
-	<view>
+	<view style="background: #2b335e">
 		<web-view
 			ref="webView"
 			class="web"
@@ -66,7 +66,6 @@ export default {
 	methods: {
 		handleMessage(evt) {
 			if (!this.wv) {
-				console.err('没有wv');
 				this.wv = this.currentWebview.children()[0];
 				if (!this.wv) {
 					this.$mHelper.toast(`handleMessage error:${this.wv}`);
@@ -85,6 +84,7 @@ export default {
 					);
 					break;
 				case 'uni_openPage':
+					console.log('===', params.url)
 					uni.navigateTo({
 						url: '/pages/webview/subWebview?url=' + params.url,
 					});
@@ -96,7 +96,7 @@ export default {
 							this.wv.evalJS(`${callBackFunctionName}(${JSON.stringify(res)})`);
 						})
 						.catch((err) => {
-							this.$mHelper.toast(`${params.url}:${err}`);
+							this.$mHelper.toast(`${err}`);
 						});
 					break;
 				default:
@@ -108,10 +108,13 @@ export default {
 </script>
 
 <style lang="scss" scoped></style>
+
 ```
 
 ### h5 部分  
-pMessage.ts
+pMessage.ts    
+uni.webview.1.5.4.js：
+https://gitcode.net/dcloud/hello-uni-app-x/-/blob/alpha/hybrid/html/uni.webview.1.5.5.js   
 ``` js
 import * as uni from "./uni.webview.1.5.4.js";
 uni.getEnv(function (res) {
