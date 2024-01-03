@@ -5,5 +5,5 @@ draft: false
 description: "16personalities"
 tags: ["16personalities"]
 ---
-### 16中人格测试  
+### 16种人格测试  
 网址：[https://www.16personalities.com/ch](https://www.16personalities.com/ch)
