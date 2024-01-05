@@ -1,5 +1,5 @@
 ---
-title: 'MessageBus 单例'
+title: "MessageBus 单例"
 pubDate: 2022-07-01
 draft: false
 description: "MessageBus EventBus 单例"
@@ -7,6 +7,7 @@ tags: ["js"]
 ---
 
 MessageBus.ts
+
 ```js
 class MessageBus {
   private static instance: MessageBus;
@@ -64,9 +65,10 @@ export default MessageBus.getInstance();
 ```
 
 调用
+
 ```js
 import MessageBus from "./utils/MessageBus";
-MessageBus.emit(GameEmit.GameStart,{})
-MessageBus.on(GameEmit.GameStart, this.event, this)
-MessageBus.off(GameEmit.GameStart, this.event,this)
+MessageBus.emit(GameEmit.GameStart, {});
+MessageBus.on(GameEmit.GameStart, this.event, this);
+MessageBus.off(GameEmit.GameStart, this.event, this);
 ```
