@@ -24,7 +24,7 @@ sudo xattr -d com.apple.quarantine "/Applications/PicGo.app"
 
 4、存储区域：七牛云的存储区域（华东 z0，华北 z1，华南 z2，北美 na0，东南亚 as0 ），根据你空间所在的区域，填对应的代码  
 
-5、文件夹
+5、储存路径（七牛云文件夹）
 
 ![](https://cdn.jump.icu/blog/20240109124112.png)
 ![](https://cdn.jump.icu/blog/20240109124136.png)
