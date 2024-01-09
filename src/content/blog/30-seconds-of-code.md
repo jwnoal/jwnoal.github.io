@@ -8,6 +8,24 @@ tags: ["js"]
 
 ## 30 Seconds
 
+#### 获取url参数
+```js
+export function getUrlParams() {
+  const url = location.href;
+  const params = {};
+  const search = url.split("?")[1];
+  if (search) {
+    const pairs = search.split("&");
+    pairs.forEach((pair) => {
+      const [key, value] = pair.split("=");
+      console.log(decodeURIComponent(value));
+      params[key] = decodeURIComponent(value);
+    });
+  }
+  return params;
+}
+```
+
 #### 时间加减天数 addDaysToDate
 
 ```js
