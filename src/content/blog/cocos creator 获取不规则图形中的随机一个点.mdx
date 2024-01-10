@@ -9,11 +9,8 @@ tags: ["cocos creator"]
 节点中添加Sprite,PolygonCollider  
 
 ```js
-const worldPoints = node.getComponent(cc.PolygonCollider).world.points;
-const randomPoint = this.getRandomPointInPolygon(worldPoints);
-console.log(randomPoint);
-
-function getRandomPointInPolygon(points: cc.Vec2[]): cc.Vec2 {
+export function getRandomPointInPolygon(quyu: cc.Node): cc.Vec2 {
+  const points = quyu.getComponent(cc.PolygonCollider).points;
   let minX = Number.MAX_VALUE;
   let minY = Number.MAX_VALUE;
   let maxX = Number.MIN_VALUE;
@@ -48,3 +45,8 @@ function randomInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 ```
+
+<iframe
+  style="width:390px;height:844px"
+  src="https://game.jump.icu/gameall/index.html?scene=areaWalk&title=区域内运动"
+></iframe>
