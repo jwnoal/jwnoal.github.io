@@ -1,5 +1,5 @@
 ---
-title: 'cocos creator 多点匀速运动'
+title: "cocos creator 多点匀速运动"
 pubDate: 2023-11-18
 draft: false
 description: "cocos creator 多点匀速运动"
@@ -24,7 +24,13 @@ export function AniMove(boss: cc.Node, lineChildren: cc.Node[], callback) {
     .start();
 }
 
+// 获得两点之间距离
 export function getDistance(node1: cc.Node, node2: cc.Node) {
   return node1.position.sub(node2.position).mag();
 }
 ```
+
+<iframe
+  style="width:390px;height:844px"
+  src="https://game.jump.icu/gameall/index.html?scene=constantSpeed&title=多点匀速运动"
+></iframe>
