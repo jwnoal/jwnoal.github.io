@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { init } from "@waline/client";
 import "@waline/client/dist/waline.css";
-import { ref, onMounted, defineProps } from "vue";
+import { ref, onMounted } from "vue";
 
 interface Props {
   title: string;
