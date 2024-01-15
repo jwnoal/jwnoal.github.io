@@ -21,7 +21,7 @@
     "@types/react-dom": "^18.2.13",
     "@waline/api": "^1.0.0-alpha.1",
     "@waline/client": "^3.0.0-alpha.1",
-    "astro": "^3.4.0",
+    "astro": "^3.6.4",
     "astro-icon": "^0.8.1",
     "astro-particles": "^2.10.0",
     "react": "^18.2.0",
