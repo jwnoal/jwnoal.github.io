@@ -71,7 +71,8 @@ aliyunVerify.verify({
 1003|验证中断|表示验证中断。
 2002|网络错误|表示网络错误。
 2003|客户端设备时间错误|表示客户端设备时间错误。
-2006|刷脸失败|表示刷脸失败，如需获取更详细的失败原因，需调用服务端 DescribeFaceVerify 接口获取。
+2006|刷脸失败|表示刷脸失败，如需获取更详细的失败原因，需调用服务端 DescribeFaceVerify 接口获取。 
 
-以上的uniapp包在 uniapp manifest.json/App常用其他设置targetSdkVersion：30 正常，31以上打打包失败，可以用下面的包试试
-![包地址](https://cdn.jump.icu/blog/AP-FaceDetectModule.zip)
+
+####  以上的uniapp包在 uniapp manifest.json/App常用其他设置targetSdkVersion：30 正常，31以上打打包失败，可以用下面的包试试  
+[包地址](https://cdn.jump.icu/blog/AP-FaceDetectModule.zip)
