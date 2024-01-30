@@ -75,4 +75,4 @@ aliyunVerify.verify({
 
 
 ####  以上的uniapp包在 uniapp manifest.json/App常用其他设置targetSdkVersion：30 正常，31以上打打包失败，可以用下面的包试试  
-[包地址](https://cdn.jump.icu/blog/AP-FaceDetectModule.zip)
+[包地址](https://cdn.jiangwei.zone/blog/AP-FaceDetectModule.zip)

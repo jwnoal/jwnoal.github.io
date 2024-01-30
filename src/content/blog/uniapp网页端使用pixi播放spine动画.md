@@ -8,8 +8,8 @@ tags: ["js", "pixi.js"]
 
 uniapp 和 h5 的 pixi 使用有些兼容性问题
 
-[pixi.js下载地址](https://cdn.jump.icu/blog/pixi.js)
-[pixi-spine.js下载地址](https://cdn.jump.icu/blog/pixi-spine.js)
+[pixi.js下载地址](https://cdn.jiangwei.zone/blog/pixi.js)
+[pixi-spine.js下载地址](https://cdn.jiangwei.zone/blog/pixi-spine.js)
 
 ```js
 <view id="pixiDom" ref="pixiDom" class="pixiDemo"></view>

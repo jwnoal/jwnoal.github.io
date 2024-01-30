@@ -14,9 +14,9 @@ wx.getUserInfo 接口获取用户昵称头像将被收回
 [文档地址](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/userProfile.html)
 
 所以我在小程序首页进行引导：  
-![图片](https://cdn.jump.icu/blog/20231103182100.png)
+![图片](https://cdn.jiangwei.zone/blog/20231103182100.png)
 点击进入小程序，进行弹框：  
-![图片](https://cdn.jump.icu/blog/20231103182645.png)
+![图片](https://cdn.jiangwei.zone/blog/20231103182645.png)
 
 弹框的代码：
 
@@ -61,7 +61,7 @@ wx.getUserInfo 接口获取用户昵称头像将被收回
  <input v-model="nickName" type="nickname" class="weui-input" placeholder="请输入昵称" />
 ```
 
-![图片](https://cdn.jump.icu/blog/20231103175725.png)
+![图片](https://cdn.jiangwei.zone/blog/20231103175725.png)
 
 输入后获得`avatarUrl,nickName`
 

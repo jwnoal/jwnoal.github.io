@@ -12,10 +12,10 @@ tags: ["astro"]
 
 需要注意的是：  
 点击顶部的 Settings - Environment Variables 进入环境变量配置页，并配置三个环境变量 LEAN_ID, LEAN_KEY 和 LEAN_MASTER_KEY 。它们的值分别对应上一步在 LeanCloud 中获得的 APP ID, APP KEY, Master Key。
-![](https://cdn.jump.icu/blog/202311041612746.png)
+![](https://cdn.jiangwei.zone/blog/202311041612746.png)
 
 具体配置：  
-![](https://cdn.jump.icu/blog/202311041614031.png)
+![](https://cdn.jiangwei.zone/blog/202311041614031.png)
 在 value 处分别对应填入你的 APP ID, APP KEY, Master Key
 
 然后继续跟着文档操作~~

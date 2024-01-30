@@ -15,4 +15,4 @@ tags: ["微信小程序", "uniapp"]
 https://api.next.bspapp.com
 ```
 
-![](https://cdn.jump.icu/blog/202311042137458.png)
+![](https://cdn.jiangwei.zone/blog/202311042137458.png)

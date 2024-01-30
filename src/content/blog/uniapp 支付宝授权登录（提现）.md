@@ -13,7 +13,7 @@ tags: ["uniapp"]
 3. manifest配置 APP常用其他设置/UrlSchemes    
 4. 编写代码  
 
-![图片](https://cdn.jump.icu/blog/20240115144225.png)  
+![图片](https://cdn.jiangwei.zone/blog/20240115144225.png)  
 
 ```js
 bind() {

@@ -26,5 +26,5 @@ sudo xattr -d com.apple.quarantine "/Applications/PicGo.app"
 
 5、储存路径（七牛云文件夹）
 
-![](https://cdn.jump.icu/blog/20240109124112.png)
-![](https://cdn.jump.icu/blog/20240109124136.png)
+![](https://cdn.jiangwei.zone/blog/20240109124112.png)
+![](https://cdn.jiangwei.zone/blog/20240109124136.png)
