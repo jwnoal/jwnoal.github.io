@@ -34,9 +34,9 @@
     on:input={handleChange}
   />
   <ul>
-    {#each titleArr as item (item.url)}
+    {#each titleArr as item, index (item.url)}
       <li>
-        <a href={item.url}>{item.title}</a>
+        <a href={item.url}>{index + 1}. {item.title}</a>
       </li>
     {/each}
   </ul>
@@ -53,7 +53,7 @@
     margin-bottom: 20px;
     outline: none;
   }
-  input::placeholder{
+  input::placeholder {
     color: #ddd;
   }
 </style>
