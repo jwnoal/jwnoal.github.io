@@ -8,7 +8,7 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jump.icu',
+  site: 'https://jiangwei.zone',
   integrations: [mdx(), sitemap(), vue(), react({
     include: ['**/react/*']
   }), svelte()],
