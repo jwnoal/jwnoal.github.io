@@ -17,7 +17,7 @@ const props = defineProps<Props>();
 onMounted(() => {
   init({
     el: waline.value,
-    serverURL: "https://waline.jump.icu/",
+    serverURL: "https://waline.jiangwei.zone/",
     path: props.title,
     dark: true,
   });

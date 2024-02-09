@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /imgs/
 Disallow: /icons/
-Sitemap: https://jump.icu/sitemap-index.xml
+Sitemap: https://jiangwei.zone/sitemap-index.xml

@@ -13,7 +13,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jump.icu',
+  site: 'https://jiangwei.zone',
   integrations: [],
   markdown: {
     shikiConfig: {

@@ -479,6 +479,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"vscode 插件.md": {
+	id: "vscode 插件.md";
+  slug: "vscode-插件";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "vue css变量.md": {
 	id: "vue css变量.md";
   slug: "vue-css变量";

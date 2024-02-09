@@ -32,7 +32,7 @@ export interface Site {
 export const site: Site = {
     lang: "zh",
     rssTitle: "soymilk blog posts",
-    siteName: "jump.icu",
+    siteName: "jiangwei.zone",
     title: "Welcome to my personal website.",
     description:
         "This is my personal website, where I post news and some other cool stuff.",
