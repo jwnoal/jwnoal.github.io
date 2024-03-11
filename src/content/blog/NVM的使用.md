@@ -36,7 +36,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 ```
 将此命令粘贴到.bash_profile文件中，输入vim ~/.bash_profile会打开这个文件，将上面内容粘贴进去。然后点击esc,输入:wq保存并退出。还可以在打开访达，在mac用户的根目录下使用shift+command+.显示隐藏文件。会看到.bash_profile文件，打开，粘贴进去保存就行。
-输入node -v你会发现提示命令不存在，输入source ~/.bash_file再重新输入node -v就好了。
+输入node -v你会发现提示命令不存在，输入source ~/.bash_profile再重新输入node -v就好了。
 完成后输入
 ```
 nvm
@@ -61,5 +61,11 @@ nvm reinstall-packages <version> ## 在当前版本 node 环境下，重新   �
 nvm alias default [node版本号] ##设置默认版本
 ```
 
-
+Mac配置好了环境变量文件(.bash_profile)后，每次打开终端都需要执行一遍source ~/.bash_profile才能使环境变量生效，这样很是麻烦；
+```shell
+touch .zshrc
+open .zshrc
+```  
+向.zshrc中添加如下内容   
+source ~/.bash_profile
 
