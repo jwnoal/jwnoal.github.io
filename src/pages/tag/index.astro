@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import TagCloud from "../../components/vue/TagCloud.vue";
+// import TagCloud from "../../components/vue/TagCloud.vue";
 
 const allPosts = await getCollection("blog");
 const uniqueTag = [...new Set(allPosts.map((p) => p.data.tags).flat())];
@@ -13,7 +13,7 @@ const uniqueTag = [...new Set(allPosts.map((p) => p.data.tags).flat())];
   className={"grid"}
 >
   <Fragment slot="main">
-    <!-- <ul class="flex-wrap card-tags">
+    <ul class="flex-wrap card-tags">
       {
         uniqueTag.map((t) => (
           <li class="tag-link">
@@ -24,7 +24,7 @@ const uniqueTag = [...new Set(allPosts.map((p) => p.data.tags).flat())];
           </li>
         ))
       }
-    </ul> -->
-    <TagCloud tags={uniqueTag} client:load />
+    </ul>
+    <!-- <TagCloud tags={uniqueTag} client:load /> -->
   </Fragment>
 </BaseLayout>
