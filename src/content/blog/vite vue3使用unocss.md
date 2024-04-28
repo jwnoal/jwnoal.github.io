@@ -51,3 +51,5 @@ export default defineConfig({
 ```vue
 <h1 class="text-24 font-bold m-10 mt-20 w-50">Hello world!</h1>
 ```
+
+localhost:5173/__unocss

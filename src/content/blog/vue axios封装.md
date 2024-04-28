@@ -8,6 +8,7 @@ tags: ["vue"]
 ```js
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
 import { showToast } from "vant";
+import { GetChannel } from "./Util";
 import { useUserStore } from "@/store/modules/user";
 
 // 函数返回唯一的请求key
@@ -59,10 +60,18 @@ service.interceptors.request.use(
 
     // 设置headers
     const token = sessionStorage.getItem("token");
+    const channel = GetChannel();
+    // const trade_no = GetCookie("EESKINS_TRACK_NO") || undefined;
+    const DeviceID = localStorage.getItem("clientIdentifier");
 
     config.headers = {
       ...config.headers,
-      Authorization: token,
+      App: "cloudgame",
+      Platform: "h5",
+      Version: "1.0.0",
+      Source: channel,
+      DeviceID: DeviceID || "",
+      Authorization: token ? "bearer " + token : "",
     };
     // if (config.method === "post") {
     //   config.data = {
@@ -101,7 +110,7 @@ service.interceptors.response.use(
     }
   },
   (error) => {
-    console.log("response error", error);
+    // console.log("response error", error);
     const { response } = error;
     if (response) {
       switch (response.status) {
@@ -118,7 +127,7 @@ service.interceptors.response.use(
           break;
       }
     }
-    return Promise.reject(error.message);
+    return Promise.reject(error.code == "ERR_CANCELED" ? "" : error.message);
   }
 );
 
@@ -129,4 +138,5 @@ export function httpGet<P, R>(url: string, params?: P): Promise<R> {
 export function httpPost<P, R>(url: string, params?: P): Promise<R> {
   return service.post(url, { ...params });
 }
+
 ```

@@ -10,13 +10,22 @@ tags: ["vue"]
 
 ```ts
 <template>
-<router-view v-slot="{ Component }">
-  <transition name="fade" mode="out-in">
-    <keep-alive :include="includeList">
-      <component :is="Component" :key="route.fullPath" />
-    </keep-alive>
-  </transition>
-</router-view>
+  <div
+    id="layout"
+    class="van-safe-area-bottom"
+    :class="`page-${String(route.name)}`"
+  >
+    <div id="layoutContainer" :class="{ 'layout-mb': useGlobalStore().tabbar }">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <keep-alive :include="includeList">
+            <component :is="Component" :key="route.fullPath" />
+          </keep-alive>
+        </transition>
+      </router-view>
+    </div>
+  </div>
+  <tabbar v-if="useGlobalStore().tabbar"></tabbar>
 </template>
 
 <script setup lang="ts">
@@ -72,19 +81,12 @@ const routes: Array<RouteRecordRaw> = [
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
-  routes,
-  scrollBehavior(_to, _from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    } else {
-      return { top: 0, left: 0 };
-    }
-  },
+  routes
 });
 
 //layout 为overflow:auto的节点
 router.beforeEach((to, from, next) => {
-  // 记录滚动条位置
+   // 记录滚动条位置
   if (from.meta.keepAlive) {
     const scrollTop = (document.getElementById("layout") as HTMLElement)
       .scrollTop;
@@ -92,10 +94,13 @@ router.beforeEach((to, from, next) => {
   }
   if (to.meta.keepAlive) {
     const scrollTop = useGlobalStore().savedPosition[String(to.name)];
-    console.log(scrollTop, document.getElementById("layout"));
     setTimeout(() => {
       (document.getElementById("layout") as any).scrollTop = scrollTop;
-    }, 300);
+    }, 250);
+  } else {
+    setTimeout(() => {
+      (document.getElementById("layout") as any).scrollTop = 0;
+    }, 250);
   }
   next();
 });
