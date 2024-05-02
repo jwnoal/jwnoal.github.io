@@ -57,10 +57,10 @@ sentryVitePlugin({
 ```
 
 authToken: 登录sentry后，Settings/user/Auth Tokens  
-![](https://cdn.jump.icu/blog/1714632130366.jpg)  
+![](https://cdn.jiangwei.zone/blog/1714632130366.jpg) 
 
 sourcemaps: 登录sentry后，Settings/Projects/xxx/Source Maps  
-![](https://cdn.jump.icu/blog/1714632458269.jpg)
+![](https://cdn.jiangwei.zone/blog/1714632458269.jpg)
 
 参考链接
 - [sentry官网](https://sentry.io/)
