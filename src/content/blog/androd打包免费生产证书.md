@@ -8,3 +8,12 @@ tags: ["android"]
 
 地址：
 [https://www.yunedit.com/createcert]{https://www.yunedit.com/createcert}
+
+备案：
+登录阿里云，上传包，检测一下会有公钥和md5
+
+或
+```
+brew install jadx
+jadx-gui
+```
