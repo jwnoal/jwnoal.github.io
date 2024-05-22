@@ -24,6 +24,7 @@ keytool -list -v -keystore steamcool.keystore
 ```
 
 应用宝认领包  
-``` 最后一个是别名
+``` shell
+# 最后一个是别名
 jarsigner -verbose -keystore steamcool.keystore -signedjar steamcool_signed.apk steamcool.apk com.steamcool
 ```
