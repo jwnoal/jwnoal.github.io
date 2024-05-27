@@ -149,3 +149,8 @@ RxJS 是使用 Observables 的响应式编程的库，它使编写异步或基�
 [文档](https://github.com/airbnb/lottie-web)
 
 
+## vue-count-to
+数字滚动插件 
+[文档](https://github.com/xiaofan9/vue-count-to?tab=readme-ov-file)
+
+
