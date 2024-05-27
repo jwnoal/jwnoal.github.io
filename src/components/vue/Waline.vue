@@ -18,6 +18,7 @@ onMounted(() => {
   init({
     el: waline.value,
     serverURL: "https://waline.jump.icu/",
+    pageview: true,
     path: props.title,
     dark: true,
   });
