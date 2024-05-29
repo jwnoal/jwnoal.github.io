@@ -33,10 +33,7 @@ const { title, description, tags, pubDate } = Astro.props;
             }</time
           >
         </p>
-        <div id="article-info">
-          浏览量:
-          <span class="waline-pageview-count" data-path={`blog/${title}`} />
-        </div>
+        <div>浏览量:<span class="waline-pageview-count"></span></div>
       </div>
       <article>
         <slot />
