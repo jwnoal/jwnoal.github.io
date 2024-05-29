@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { init } from "@waline/client";
-import "@waline/client/dist/waline.css";
+import '@waline/client/style';
 import { ref, onMounted } from "vue";
 
 interface Props {
@@ -19,6 +19,7 @@ onMounted(() => {
     el: waline.value,
     serverURL: "https://waline.jump.icu/",
     pageview: true,
+    reaction: true,
     path: props.title,
     dark: true,
   });

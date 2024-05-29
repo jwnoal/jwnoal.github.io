@@ -148,9 +148,10 @@ RxJS 是使用 Observables 的响应式编程的库，它使编写异步或基�
 用于解析使用 Bodymovin 导出为 json 的 Adobe After Effects 动画  
 [文档](https://github.com/airbnb/lottie-web)
 
+---
 
 ## vue-count-to
-数字滚动插件 
+数字滚动插件   
 [文档](https://github.com/xiaofan9/vue-count-to?tab=readme-ov-file)
 
 

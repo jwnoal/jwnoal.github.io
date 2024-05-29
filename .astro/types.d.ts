@@ -227,6 +227,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"androd打包免费生产证书.md": {
+	id: "androd打包免费生产证书.md";
+  slug: "androd打包免费生产证书";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "astro博客新增评论系统waline.md": {
 	id: "astro博客新增评论系统waline.md";
   slug: "astro博客新增评论系统waline";
@@ -346,6 +353,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"h5 生成jwt.md": {
+	id: "h5 生成jwt.md";
+  slug: "h5-生成jwt";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "h5 页面失焦判断.md": {
 	id: "h5 页面失焦判断.md";
   slug: "h5-页面失焦判断";
@@ -402,6 +416,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"sentry 监控系统.md": {
+	id: "sentry 监控系统.md";
+  slug: "sentry-监控系统";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "shell 生成文件.md": {
 	id: "shell 生成文件.md";
   slug: "shell-生成文件";
@@ -409,9 +430,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"tab快速点击数据串的问题.md": {
+	id: "tab快速点击数据串的问题.md";
+  slug: "tab快速点击数据串的问题";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "ts实现Window自定义方法不报错.md": {
 	id: "ts实现Window自定义方法不报错.md";
   slug: "ts实现window自定义方法不报错";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"uniapp webview 加载本地页面.md": {
+	id: "uniapp webview 加载本地页面.md";
+  slug: "uniapp-webview-加载本地页面";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -465,9 +500,44 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"uniapp 遇到的问题.md": {
+	id: "uniapp 遇到的问题.md";
+  slug: "uniapp-遇到的问题";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"uniappX  app空架子.md": {
+	id: "uniappX  app空架子.md";
+  slug: "uniappx--app空架子";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "uniapp网页端使用pixi播放spine动画.md": {
 	id: "uniapp网页端使用pixi播放spine动画.md";
   slug: "uniapp网页端使用pixi播放spine动画";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"unicloud 多表联查.md": {
+	id: "unicloud 多表联查.md";
+  slug: "unicloud-多表联查";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vite vue3使用unocss.md": {
+	id: "vite vue3使用unocss.md";
+  slug: "vite-vue3使用unocss";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vite 打包上线后文件因缓存报错.md": {
+	id: "vite 打包上线后文件因缓存报错.md";
+  slug: "vite-打包上线后文件因缓存报错";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -482,6 +552,13 @@ declare module 'astro:content' {
 "vscode 插件.md": {
 	id: "vscode 插件.md";
   slug: "vscode-插件";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue axios封装.md": {
+	id: "vue axios封装.md";
+  slug: "vue-axios封装";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -507,9 +584,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"vue 滑动头部渐变背景.md": {
+	id: "vue 滑动头部渐变背景.md";
+  slug: "vue-滑动头部渐变背景";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "vue 组件递归调用自己.md": {
 	id: "vue 组件递归调用自己.md";
   slug: "vue-组件递归调用自己";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue 路由缓存.md": {
+	id: "vue 路由缓存.md";
+  slug: "vue-路由缓存";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -531,6 +622,13 @@ declare module 'astro:content' {
 "vue全局toast组件.md": {
 	id: "vue全局toast组件.md";
   slug: "vue全局toast组件";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue数据请求referrer为域名.md": {
+	id: "vue数据请求referrer为域名.md";
+  slug: "vue数据请求referrer为域名";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -619,6 +717,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"微信公众号网页授权登录公用.md": {
+	id: "微信公众号网页授权登录公用.md";
+  slug: "微信公众号网页授权登录公用";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"微信公众号页面授权登录.md": {
+	id: "微信公众号页面授权登录.md";
+  slug: "微信公众号页面授权登录";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"微信公众号页面配置分享好友和朋友圈.md": {
+	id: "微信公众号页面配置分享好友和朋友圈.md";
+  slug: "微信公众号页面配置分享好友和朋友圈";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "微信小程序报错fail url not in domain list.md": {
 	id: "微信小程序报错fail url not in domain list.md";
   slug: "微信小程序报错fail-url-not-in-domain-list";
@@ -654,6 +773,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"浏览器兼容性问题.md": {
+	id: "浏览器兼容性问题.md";
+  slug: "浏览器兼容性问题";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"浏览器禁止双指或点击放大.md": {
+	id: "浏览器禁止双指或点击放大.md";
+  slug: "浏览器禁止双指或点击放大";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "移动端最新适配方案.md": {
 	id: "移动端最新适配方案.md";
   slug: "移动端最新适配方案";
@@ -685,6 +818,13 @@ declare module 'astro:content' {
 "英文字母数字标点符号.md": {
 	id: "英文字母数字标点符号.md";
   slug: "英文字母数字标点符号";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"获取浏览器是否有上一页.md": {
+	id: "获取浏览器是否有上一页.md";
+  slug: "获取浏览器是否有上一页";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
