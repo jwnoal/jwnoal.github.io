@@ -1,12 +1,24 @@
 ---
+
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import SearchBar from "../components/svelte/SearchBar.svelte";
+
+// Retrieve all articles
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+const searchList = posts.map(({ data, slug }) => ({
+  title: data.title,
+  url: `/blog/${slug}`,
+}));
 ---
 
 <BaseLayout title={"jiangwei小站"} description={"Home Page"}>
   <Fragment slot="main">
-    <h2>Hello!</h2>
+    <!-- <h2>Hello!</h2>
     <h1 style="color:#1fdad4">Welcome to JiangWei 小站~</h1>
-    <article style="color:#1e9c19"><p>This is my personal website.</p></article>
+    <article style="color:#1e9c19"><p>This is my personal website.</p></article> -->
+    <SearchBar client:load searchList={searchList} />
   </Fragment>
 </BaseLayout>
 
