@@ -8,14 +8,16 @@ import "@waline/client/style";
 import { ref, onMounted } from "vue";
 
 onMounted(() => {
-  init({
-    el: "#waline",
-    serverURL: "https://waline.jump.icu/",
-    comment: true,
-    reaction: true,
-    dark: true,
-    pageview: true,
-  });
+  setTimeout(() => {
+    init({
+      el: "#waline",
+      serverURL: "https://waline.jump.icu",
+      comment: true,
+      reaction: true,
+      dark: true,
+      pageview: false,
+    });
+  }, 200);
 });
 </script>
 

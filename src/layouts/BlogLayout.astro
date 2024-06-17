@@ -7,6 +7,7 @@ import TagNav from "../components/TagNav.astro";
 import { site } from "../data/site";
 import ParticlesBlog from "../components/Particles/ParticlesBlog.astro";
 import Waline from "../components/vue/Waline.vue";
+import Icon from "astro-icon";
 
 export type Props = Omit<CollectionEntry<"blog">["data"], "draft"> & {
   url: string;
@@ -35,8 +36,8 @@ const { title, description, tags, pubDate } = Astro.props;
             }</time
           >
         </p>
-        <div id="article-info">
-          浏览量:<span class="waline-pageview-count" data-path={Astro.url.pathname}></span>
+        <div>
+          浏览：<span id="busuanzi_value_page_pv"></span>次
         </div>
       </div>
       <article>
@@ -46,5 +47,8 @@ const { title, description, tags, pubDate } = Astro.props;
 
     <Waline title={title} client:load />
     <Footer />
+    <script
+      async
+      src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </body>
 </html>
