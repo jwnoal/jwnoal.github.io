@@ -339,6 +339,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"css 控制video control.md": {
+	id: "css 控制video control.md";
+  slug: "css-控制video-control";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "electron 重新定义Menu(禁用刷新，缩放，打开控制台).md": {
 	id: "electron 重新定义Menu(禁用刷新，缩放，打开控制台).md";
   slug: "electron-重新定义menu禁用刷新缩放打开控制台";
@@ -808,9 +815,9 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"移动端最新适配方案.md": {
-	id: "移动端最新适配方案.md";
-  slug: "移动端最新适配方案";
+"移动端最新适配方案pxtoviewport.md": {
+	id: "移动端最新适配方案pxtoviewport.md";
+  slug: "移动端最新适配方案pxtoviewport";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -818,6 +825,13 @@ declare module 'astro:content' {
 "移动端滑动穿透方案及demo.md": {
 	id: "移动端滑动穿透方案及demo.md";
   slug: "移动端滑动穿透方案及demo";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"移动端适配方案pxtorem.md": {
+	id: "移动端适配方案pxtorem.md";
+  slug: "移动端适配方案pxtorem";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

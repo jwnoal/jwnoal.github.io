@@ -1,27 +1,18 @@
 <template>
-  <div ref="waline" id="waline" class="mydiv"></div>
+  <div id="waline" class="mydiv"></div>
 </template>
 
 <script setup lang="ts">
-import { init, pageviewCount } from "@waline/client";
+import { init } from "@waline/client";
 import "@waline/client/style";
 import { ref, onMounted } from "vue";
 
-interface Props {
-  title: string;
-}
-
-const waline = ref(null);
-const props = defineProps<Props>();
-
-
-
 onMounted(() => {
   init({
-    el: waline.value,
+    el: "#waline",
     serverURL: "https://waline.jump.icu/",
+    comment: true,
     reaction: true,
-    path: props.title,
     dark: true,
     pageview: true,
   });
