@@ -41,5 +41,16 @@ const { title, description, tags, pubDate } = Astro.props;
     </main>
     <Waline title={title} client:load />
     <Footer />
+    <script>
+      import { pageviewCount } from "@waline/client";
+      pageviewCount({
+        serverURL: "https://waline.jump.icu",
+        path: window.location.pathname,
+        // 可选的，用于自定选择器，默认为 `'.waline-pageview-count'`
+        selector: 'waline-pageview-count',
+        // 可选的，是否在获取时增加访问量，默认为 `true`
+        update: true,
+      });
+    </script>
   </body>
 </html>

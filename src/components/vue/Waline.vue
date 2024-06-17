@@ -14,6 +14,8 @@ interface Props {
 const waline = ref(null);
 const props = defineProps<Props>();
 
+
+
 onMounted(() => {
   init({
     el: waline.value,
@@ -21,17 +23,7 @@ onMounted(() => {
     reaction: true,
     path: props.title,
     dark: true,
-  });
-
-  pageviewCount({
-    serverURL: "https://waline.jump.icu",
-    path: window.location.pathname,
-
-    // 可选的，用于自定选择器，默认为 `'.waline-pageview-count'`
-    // selector: 'waline-pageview-count',
-
-    // 可选的，是否在获取时增加访问量，默认为 `true`
-    update: false,
+    pageview: true,
   });
 });
 </script>

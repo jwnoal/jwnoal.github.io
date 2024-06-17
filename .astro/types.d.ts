@@ -409,6 +409,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"mac 使用adb.md": {
+	id: "mac 使用adb.md";
+  slug: "mac-使用adb";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "matter.js实现重力小球.md": {
 	id: "matter.js实现重力小球.md";
   slug: "matterjs实现重力小球";
@@ -524,6 +531,13 @@ declare module 'astro:content' {
 "unicloud 多表联查.md": {
 	id: "unicloud 多表联查.md";
   slug: "unicloud-多表联查";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vite vue3上线配置.md": {
+	id: "vite vue3上线配置.md";
+  slug: "vite-vue3上线配置";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -664,6 +678,13 @@ declare module 'astro:content' {
 "使用picgo上传图片到七牛云.md": {
 	id: "使用picgo上传图片到七牛云.md";
   slug: "使用picgo上传图片到七牛云";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"准时的setTimeout.md": {
+	id: "准时的setTimeout.md";
+  slug: "准时的settimeout";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
