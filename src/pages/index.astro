@@ -1,5 +1,4 @@
 ---
-
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import SearchBar from "../components/svelte/SearchBar.svelte";
@@ -21,6 +20,9 @@ const searchList = posts.map(({ data, slug }) => ({
     <SearchBar client:load searchList={searchList} />
   </Fragment>
 </BaseLayout>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+></script>
 
 <style>
   h2 {
