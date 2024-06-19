@@ -1,6 +1,6 @@
 ---
 title: "vite vue3上线配置"
-pubDate: 2025-06-02
+pubDate: 2024-06-02
 draft: false
 description: "vite vue3上线配置"
 tags: ["vite", "vue3"]

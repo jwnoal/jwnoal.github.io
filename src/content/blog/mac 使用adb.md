@@ -1,6 +1,6 @@
 ---
 title: "mac 使用adb"
-pubDate: 2025-05-31
+pubDate: 2024-05-31
 draft: false
 description: "mac 使用adb"
 tags: ["mac"]
