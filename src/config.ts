@@ -9,14 +9,14 @@ import { LinkPreset } from './types/config'
 export const siteConfig: SiteConfig = {
   title: 'jiangwei小站',
   subtitle: '技术博客',
-  lang: 'zh_CN', // 'en', 'zh_CN', 'zh_TW', 'ja'
+  lang: 'zh_CN', // 'zh_CN', 'zh_CN', 'zh_TW', 'ja'
   themeColor: {
     hue: 315, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
     fixed: false, // Hide the theme color picker for visitors
   },
   banner: {
     enable: false,
-    src: 'assets/images/demo-banner.png', // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: 'assets/images/banner.png', // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'center', // Equivalent to object-position, defaults center
   },
   favicon: [
@@ -43,7 +43,7 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/demo-avatar.png', // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: 'assets/images/avatar.png', // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'jiangwei小站',
   bio: '轻舟已过万重山',
   links: [

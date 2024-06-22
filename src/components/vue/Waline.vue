@@ -29,4 +29,7 @@ onMounted(() => {
 :deep(.wl-reaction-title) {
   color: #999 !important;
 }
+:deep(.wl-count) {
+  color: #999 !important;
+}
 </style>
