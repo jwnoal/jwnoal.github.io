@@ -12,6 +12,7 @@ import {Favicon} from "../types/config";
 import {defaultFavicons} from "../constants/icon";
 import {LIGHT_MODE, DARK_MODE, AUTO_MODE, DEFAULT_THEME} from "../constants/constants";
 import {url} from "../utils/url-utils";
+import ParticlesBlog from "@components/Particles/ParticlesBlog.astro";
 
 interface Props {
 	title: string;
@@ -130,6 +131,7 @@ const siteLang = siteConfig.lang.replace('_', '-')
 
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"is-home": isHomePage, "enable-banner": enableBanner}]}>
+		<ParticlesBlog />
 		<ConfigCarrier></ConfigCarrier>
 		<GlobalStyles>
 		<div id="banner-wrapper" class="absolute w-full">
@@ -174,6 +176,10 @@ const siteLang = siteConfig.lang.replace('_', '-')
 	.enable-banner #top-row {
 		@apply h-[calc(var(--banner-height)_-_4.5rem)]
 	}
+
+	astro-particles {
+        display: none;
+    }
 }
 </style>
 <script>
