@@ -1,0 +1,37 @@
+---
+title: "cocos creator 多点匀速运动"
+published: 2023-11-18
+draft: false
+description: "cocos creator 多点匀速运动"
+tags: ["cocos creator"]
+---
+
+```js
+export function AniMove(boss: cc.Node, lineChildren: cc.Node[], callback) {
+  const speed = 300;
+  cc.tween(boss)
+    .to(getDistance(boss, lineChildren[0]) / speed, {
+      x: lineChildren[0].x,
+      y: lineChildren[0].y,
+    })
+    .to(getDistance(lineChildren[0], lineChildren[1]) / speed, {
+      x: lineChildren[1].x,
+      y: lineChildren[1].y,
+    })
+    .call(() => {
+      callback && callback();
+    })
+    .start();
+}
+
+// 获得两点之间距离
+export function getDistance(node1: cc.Node, node2: cc.Node) {
+  return node1.position.sub(node2.position).mag();
+}
+```
+
+<iframe
+  style="width:390px;height:844px"
+  loading="lazy"
+  src="https://game.jiangwei.zone/gameall/index.html?scene=constantSpeed&title=多点匀速运动"
+></iframe>

@@ -1,34 +1,12 @@
 ---
-import { Icon } from "astro-icon";
-import { getSiteURL } from "../utils/getSiteUrl";
-const year = new Date().getFullYear();
+
+import { profileConfig } from '../config'
 ---
 
-<footer class="footer">
-  <address class="footer-contacts">
-    <a
-      class="footer-links--github"
-      target="_blank"
-      rel="nofollow noopener noreferrer"
-      aria-label="github"
-      href="https://github.com/jwnoal/jwnoal.github.io"
-    >
-      <span class="sr-only">github</span>
-      <Icon name="github" size={18} aria-hidden="true" />
-    </a>
-  </address>
-  <p class="footer-links">
-    <a
-      class="footer-links--rss"
-      href={getSiteURL("rss.xml", Astro.site).toString()}
-      target="_blank"
-      ><span class="sr-only">RSS Feed</span>
-      <Icon name="rss" size={18} aria-hidden="true" />
-    </a>
-  </p>
-  <p class="footer-copyright">
-    <a href="https://beian.miit.gov.cn" target="_blank">
-      © 2024 jiangwei小站 版权所有 浙ICP备2021019273号-2</a
-    >
-  </p>
-</footer>
+<div class="card-base max-w-[var(--page-width)] min-h-[4.5rem] rounded-b-none mx-auto flex items-center px-6">
+    <div class="transition text-50 text-sm">
+        © 2024 {profileConfig.name}. 版权所有 浙ICP备2021019273号-2
+        <br>
+        Powered by <a class="link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/saicaca/fuwari">Fuwari</a>
+    </div>
+</div>

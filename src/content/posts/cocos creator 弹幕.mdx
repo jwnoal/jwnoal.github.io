@@ -1,0 +1,141 @@
+---
+title: "cocos creator 弹幕"
+published: 2024-01-05
+draft: false
+description: "cocos creator 弹幕"
+tags: ["cocos creator"]
+---
+
+![](https://cdn.jiangwei.zone/blog/20240109124223.png)
+![](https://cdn.jiangwei.zone/blog/20240109124243.png)
+![](https://cdn.jiangwei.zone/blog/20240109124316.png)
+
+创建弹幕容器 BarrageCont.ts
+
+```js
+import { GameData } from "../../DataManager/Constants";
+import { GameEmit } from "../../DataManager/EmitData";
+import MessageBus from "../../MessageManager/MessageBus";
+import Barrage from "./Barrage";
+
+const { ccclass, property } = cc._decorator;
+
+@ccclass
+export default class BarrageCont extends cc.Component {
+  @property(cc.Prefab)
+  barrage_Prefab: cc.Prefab = null;
+
+  index = 0;
+  msgArr: string[] = [
+    "今天天气不错",
+    "心情很好，随便来点什么",
+    "长短不一",
+    "可可爱爱可爱可爱，长句子看看看看看看看",
+  ];
+
+  async onLoad() {
+    GameData.barragePool = new cc.NodePool();
+    MessageBus.on(GameEmit.ADDBARRAGE, this.addBarrage, this);
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => {
+        this.addBarrage(i);
+      }, Math.random() * 3000);
+    }
+    // this.addBarrage(0);
+  }
+
+  onDestroy() {
+    MessageBus.off(GameEmit.ADDBARRAGE, this.addBarrage, this);
+  }
+
+  addBarrage(line: number) {
+    if (this.index == this.msgArr.length) {
+      this.index = 0;
+    }
+    let node: cc.Node;
+    if (GameData.barragePool.size() > 0) {
+      node = GameData.barragePool.get();
+    } else {
+      node = cc.instantiate(this.barrage_Prefab);
+    }
+    this.node.addChild(node);
+    node.getComponent(Barrage).init(line, this.msgArr[this.index]);
+    this.index++;
+  }
+}
+```
+
+创建弹幕预制体 Barrage.ts
+
+```js
+import { GameData } from "../../DataManager/Constants";
+import { GameEmit } from "../../DataManager/EmitData";
+import MessageBus from "../../MessageManager/MessageBus";
+import UiTool from "../../Utils/UiTool";
+
+const { ccclass, property } = cc._decorator;
+
+@ccclass
+export default class Barrage extends cc.Component {
+  startX = 0;
+  allShowX = 0;
+  allHideX = 0;
+  spaceX = 60;
+  spaceY = 20;
+  flag = true;
+  flag2 = true;
+  line = 0;
+  async onLoad() {}
+  start() {}
+  init(line: number, msg: string) {
+    this.line = line;
+    this.flag = true;
+    this.flag2 = true;
+    this.node.x = cc.winSize.width * 3; //防止闪动
+    UiTool.loadImgByUrl(
+      UiTool.getChildByPath(this.node, "hd"),
+      "https://img.gmblgamefi.com/images/2091375f9129d096a5d14d934af0949f_1702054417.jpeg",
+      false
+    );
+    UiTool.getChildByPath(
+      this.node,
+      "bg/msg",
+      cc.RichText
+    ).string = `<color=#ffca71>小灰灰</c><color=#ffffff>${msg}</color>`;
+    // 下一帧才能够获取宽度
+    setTimeout(() => {
+      this.startX = this.node.width;
+      this.allHideX = -cc.winSize.width;
+      this.node.x = this.startX;
+      this.node.y = -(this.node.height + this.spaceY) * line; //上下间距
+      cc.tween(this.node)
+        .by(16, { x: -cc.winSize.width * 3 }) //设置速度，x尽可能大
+        .start();
+    }, 100);
+  }
+  protected update(_dt: number): void {
+    if (this.node.x <= this.allHideX) {
+      if (!this.flag2) return;
+      // console.log("完全消失，进行回收");
+      this.flag2 = false;
+      cc.Tween.stopAllByTarget(this.node);
+      this.node.x = cc.winSize.width * 3;
+      GameData.barragePool.put(this.node);
+      // this.node.destroy();
+    }
+    if (!this.flag) return;
+    if (this.node.x <= -this.spaceX) {
+      // console.log("全部展示，发起下一个通知");
+      this.flag = false;
+      MessageBus.emit(GameEmit.ADDBARRAGE, this.line);
+    }
+  }
+}
+
+```
+
+<iframe
+  style="width:390px;height:844px"
+  loading="lazy"
+  src="https://game.jiangwei.zone/gameall/index.html?scene=barrage&title=%E5%BC%B9%E5%B9%95"
+></iframe>

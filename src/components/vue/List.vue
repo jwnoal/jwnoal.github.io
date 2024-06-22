@@ -17,13 +17,13 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, nextTick } from "vue";
+import { computed, nextTick, onMounted, ref } from "vue";
 
-let listdata = [];
+const listdata = [];
 for (let i = 1; i <= 10000; i++) {
   listdata.push({
     id: i,
-    msg: i + ":" + Math.floor(Math.random() * 10000),
+    msg: `${i}:${Math.floor(Math.random() * 10000)}`,
   });
 }
 
@@ -55,7 +55,7 @@ const visibleData = computed(() => {
 
 function scrollEvent() {
   //当前滚动位置
-  let scrollTop = list.value.scrollTop;
+  const scrollTop = list.value.scrollTop;
   //此时的开始索引
   start.value = Math.floor(scrollTop / itemHeight.value);
   //此时的结束索引
@@ -73,7 +73,7 @@ function scrollEvent() {
   overflow: auto;
   position: relative;
   -webkit-overflow-scrolling: touch;
-  color: #fff;
+  color: rgb(26, 199, 124);
 }
 
 .infinite-list {

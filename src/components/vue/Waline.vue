@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { init } from "@waline/client";
 import "@waline/client/style";
-import { ref, onMounted } from "vue";
+import { onMounted, ref } from "vue";
 
 onMounted(() => {
   setTimeout(() => {
@@ -25,5 +25,8 @@ onMounted(() => {
 #waline {
   width: 100%;
   max-width: 100ch;
+}
+:deep(.wl-reaction-title) {
+  color: #999 !important;
 }
 </style>
