@@ -10,16 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 官方action, 将代码拉取到虚拟机
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
+      # - name: Checkout
+      #   uses: actions/checkout@v3
+      #   with:
+      #     persist-credentials: false
 
-        # 安装node.js
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18.18.2"
+      #   # 安装node.js
+      # - name: Use Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: "18.18.2"
 
       # - name: Install Dependencies
       #   run: |
