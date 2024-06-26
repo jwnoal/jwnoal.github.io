@@ -13,24 +13,31 @@ jobs:
       name: myServer # 更改为你的服务器名称
 
     steps:
-      - name: Checkout Code
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18.x'
+       # 官方action, 将代码拉取到虚拟机
+       - name: Checkout
+         uses: actions/checkout@v3
+         with:
+          persist-credentials: false
 
-      - name: Install Dependencies
-        run: |
-          npm install
-          # 如果是其他语言，比如Python, Ruby等，更改安装命令
+        # 安装node.js
+       - name: Use Node.js
+         uses: actions/setup-node@v3
+         with:
+            node-version: "18.18.2"
 
-      - name: Build
-        run: |
+       - name: Install Dependencies
+         run: |
+              npm install
+              # 如果是其他语言，比如Python, Ruby等，更改安装命令
+
+       - name: Build
+         run: |
           npm run build
           # 如果有其他构建步骤，添加到这里
 
-      - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.1.5
-        env:
+       - name: Deploy to Server
+         uses: easingthemes/ssh-deploy@v2.1.5
+         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: "-avz --delete"
           SOURCE: "./dist/"
