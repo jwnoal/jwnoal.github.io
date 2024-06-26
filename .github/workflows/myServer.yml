@@ -33,11 +33,12 @@ jobs:
           # 如果有其他构建步骤，添加到这里
 
        - name: Deploy to Server
-         uses: easingthemes/ssh-deploy@v2.1.5
+         uses: easingthemes/ssh-deploy@v2.1.1
          env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: "-avz --delete"
           SOURCE: "./dist/"
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USER }}
+          REMOTE_PASSWORD: ${{ secrets.PASSWORD }}
           REMOTE_DIR: ${{ secrets.TATGET }}
