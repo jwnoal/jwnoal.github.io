@@ -8,10 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
-    environment:
-      name: myServer # 更改为你的服务器名称
-
+    environment: myServer
     steps:
        # 官方action, 将代码拉取到虚拟机
        - name: Checkout
