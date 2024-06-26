@@ -39,4 +39,4 @@ jobs:
           SOURCE: "./dist/"
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: "root"
-          REMOTE_DIR: "/www/wwwroot/jiangwei.zone"
+          REMOTE_DIR: "../www/wwwroot/jiangwei.zone"
