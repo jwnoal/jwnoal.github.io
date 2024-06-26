@@ -1,39 +1,33 @@
-name: Deploy to mysite
+name: Deploy to Server
+ 
 on:
   push:
     branches:
-      - master
+      - main  # 更改为你的目标分支
+ 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: Checkout the repository using git
-        uses: actions/checkout@v3
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - uses: pnpm/action-setup@v3
-        name: Install pnpm
-        with:
-          version: 8
-          run_install: true
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build
-        run: pnpm run build
-      - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.1.5
-        with:
-          # 本地.ssh文件下的私钥id_rsa，存在secrets的PRIVATE_KEY中
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
-          ARGS: "-avz --delete"
-          # 源目录
-          SOURCE: "./dist/"
-          # 部署目标主机
-          REMOTE_HOST: ${{ secrets.HOST }}
-          # 登录用户
-          REMOTE_USER: ${{ secrets.USER }}
-          # 部署目标目录
-          TARGET: ${{ secrets.TARGET }}
+    - name: Checkout Code
+      uses: actions/checkout@v2
+ 
+    - name: Install Dependencies
+      run: |
+        npm install
+        # 如果是其他语言，比如Python, Ruby等，更改安装命令
+    - name: Build
+      run: |
+        npm run build
+        # 如果有其他构建步骤，添加到这里
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        ARGS: "-avz --delete"
+        SOURCE: "./dist/"  # 更改为你构建后的文件夹
+        REMOTE_HOST: ${{ secrets.HOST }}
+        REMOTE_USER: ${{ secrets.USER }}
+        REMOTE_DIR: ${{ secrets.TATGET }}   # 更改为你的服务器部署目录
+ 
