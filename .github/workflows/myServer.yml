@@ -3,7 +3,7 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - main  # 更改为你的目标分支
+      - master  # 更改为你的目标分支
  
 jobs:
   build-and-deploy:
