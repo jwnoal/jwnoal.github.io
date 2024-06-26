@@ -8,7 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: myServer
     steps:
       # 官方action, 将代码拉取到虚拟机
       - name: Checkout
@@ -39,5 +38,5 @@ jobs:
           ARGS: "-avz --delete"
           SOURCE: "./dist/"
           REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USER }}
-          REMOTE_DIR: ${{ secrets.TATGET }}
+          REMOTE_USER: "root"
+          REMOTE_DIR: "/www/wwwroot/jiangwei.zone"
