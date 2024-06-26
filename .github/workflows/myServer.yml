@@ -1,36 +1,43 @@
 name: Deploy to Server
- 
+
 on:
   push:
     branches:
-      - master  # 更改为你的目标分支
- 
+      - master # 更改为你的目标分支
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    environment: 
-      name: myServer  # 更改为你的服务器名称
- 
+    environment:
+      name: myServer # 更改为你的服务器名称
+
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
- 
-    - name: Install Dependencies
-      run: |
-        npm install
-        # 如果是其他语言，比如Python, Ruby等，更改安装命令
-    - name: Build
-      run: |
-        npm run build
-        # 如果有其他构建步骤，添加到这里
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        ARGS: "-avz --delete"
-        SOURCE: "./dist/"  # 更改为你构建后的文件夹
-        REMOTE_HOST: ${{ secrets.HOST }}
-        REMOTE_USER: ${{ secrets.USER }}
-        REMOTE_DIR: ${{ secrets.TATGET }}   # 更改为你的服务器部署目录
- 
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: use Node.js
+        # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.18.1
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          # 如果是其他语言，比如Python, Ruby等，更改安装命令
+
+      - name: Build
+        run: |
+          npm run build
+          # 如果有其他构建步骤，添加到这里
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: "-avz --delete"
+          SOURCE: "./dist/"
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USER }}
+          REMOTE_DIR: ${{ secrets.TATGET }}
