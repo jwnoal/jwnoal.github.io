@@ -6,6 +6,8 @@ import type {
 } from './types/config'
 import { LinkPreset } from './types/config'
 
+// 1
+
 export const siteConfig: SiteConfig = {
   title: 'jiangwei小站',
   subtitle: '技术博客',
