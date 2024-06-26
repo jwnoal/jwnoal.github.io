@@ -34,7 +34,7 @@ jobs:
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.1
         env:
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: "-avz --delete"
           SOURCE: "./dist/"
           REMOTE_HOST: ${{ secrets.HOST }}
