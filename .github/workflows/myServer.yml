@@ -36,7 +36,8 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: "-avz --delete"
-          SOURCE: "./dist/"
+          SOURCE: "./dist"
           REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_PORT: "22"
           REMOTE_USER: "root"
-          REMOTE_DIR: "www/wwwroot/jiangwei.zone"
+          REMOTE_DIR: "/www/wwwroot/jiangwei.zone"
