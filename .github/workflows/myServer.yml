@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master # 更改为你的目标分支
-# 1
+# 0
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
