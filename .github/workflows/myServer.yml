@@ -38,6 +38,3 @@ jobs:
           ARGS: "-avz --delete"
           SOURCE: "./dist"
           REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_PORT: "22"
-          REMOTE_USER: "root"
-          REMOTE_DIR: "/www/wwwroot/jiangwei.zone"
