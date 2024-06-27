@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master # 更改为你的目标分支
-# 013
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,14 +11,12 @@ jobs:
       # 官方action, 将代码拉取到虚拟机
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
         # 安装node.js
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18.18.2"
+          node-version: "18.x"
 
       - name: Install Dependencies
         run: |
@@ -32,7 +29,7 @@ jobs:
           # 如果有其他构建步骤，添加到这里
 
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           ARGS: "-avz --delete"
@@ -41,3 +38,4 @@ jobs:
           REMOTE_PORT: "22"
           REMOTE_USER: "root"
           TARGET: "/www/wwwroot/jiangwei.zone"
+        
