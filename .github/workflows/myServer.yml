@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master # 更改为你的目标分支
-# 01
+# 013
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -21,15 +21,15 @@ jobs:
         with:
           node-version: "18.18.2"
 
-      # - name: Install Dependencies
-      #   run: |
-      #     npm install
-      #     # 如果是其他语言，比如Python, Ruby等，更改安装命令
+      - name: Install Dependencies
+        run: |
+          npm install
+          # 如果是其他语言，比如Python, Ruby等，更改安装命令
 
-      # - name: Build
-      #   run: |
-      #     npm run build
-      #     # 如果有其他构建步骤，添加到这里
+      - name: Build
+        run: |
+          npm run build
+          # 如果有其他构建步骤，添加到这里
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
