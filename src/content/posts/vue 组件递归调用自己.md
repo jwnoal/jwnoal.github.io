@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "vue 组件递归调用自己"
 tags: ["vue"]
+category: "代码"
 ---
 
 ```js

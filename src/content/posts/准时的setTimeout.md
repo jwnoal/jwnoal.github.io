@@ -4,6 +4,7 @@ published: 2024-06-11
 draft: false
 description: "准时的setTimeout"
 tags: ["js"]
+category: "代码"
 ---
 
 ```js

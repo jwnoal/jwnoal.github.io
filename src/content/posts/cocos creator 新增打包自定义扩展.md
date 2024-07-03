@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "cocos creator 新增打包自定义扩展"
 tags: ["cocos creator"]
+category: "代码"
 ---
 
 需求：打完包后需要将包打成 zip,并新增时间戳在 json 中

@@ -4,6 +4,7 @@ published: 2023-11-18
 draft: false
 description: "uniapp webview与h5交互"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 ```js

@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "vue svg组件(webpack)"
 tags: ["vue", "svg"]
+category: "代码"
 ---
 
 #### 安装 svg-sprite-loader

@@ -4,6 +4,7 @@ published: 2024-06-27
 draft: false
 description: "使用github actions 部署到服务器"
 tags: ["github"]
+category: "代码"
 ---
 
 1. 创建 yml 文件  

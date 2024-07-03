@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "30-seconds-of-code"
 tags: ["js"]
+category: "代码"
 ---
 
 ## 30 Seconds

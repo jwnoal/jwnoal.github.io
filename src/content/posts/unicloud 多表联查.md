@@ -4,6 +4,7 @@ published: 2024-05-25
 draft: false
 description: "unicloud 多表联查"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 需求：获取打卡列表数据，并且从打卡详情表中获取状态和打卡次数

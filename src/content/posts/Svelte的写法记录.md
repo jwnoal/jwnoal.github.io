@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "Svelte的写法记录"
 tags: ["js", "svelte"]
+category: "代码"
 ---
 
 app.svelte

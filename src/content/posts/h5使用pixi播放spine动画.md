@@ -4,6 +4,7 @@ published: 2024-01-05
 draft: false
 description: "h5使用pixi播放spine动画"
 tags: ["js", "pixi.js"]
+category: "代码"
 ---
 
 安装 pixi

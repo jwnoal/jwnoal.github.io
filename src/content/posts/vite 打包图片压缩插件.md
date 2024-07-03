@@ -4,6 +4,7 @@ published: 2023-12-21
 draft: false
 description: "vite 打包图片压缩插件"
 tags: ["vite"]
+category: "代码"
 ---
 
 vite-plugin-imagemin 有点慢，换成 unplugin-imagemin/vite  

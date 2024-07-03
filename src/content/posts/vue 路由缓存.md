@@ -4,6 +4,7 @@ published: 2024-04-09
 draft: false
 description: "vue 路由缓存+过渡效果"
 tags: ["vue"]
+category: "代码"
 ---
 
 遇到的坑 /home/index.vue 不生效 /home/home.vue 生效

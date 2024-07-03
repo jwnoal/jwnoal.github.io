@@ -4,6 +4,7 @@ published: 2024-05-22
 draft: false
 description: "tab快速点击数据串的问题"
 tags: ["vue"]
+category: "代码"
 ---
 
 ### 问题描述

@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "electron 重新定义Menu(禁用刷新，缩放，打开控制台)"
 tags: ["electron"]
+category: "代码"
 ---
 
 ```js

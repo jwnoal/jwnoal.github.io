@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "vue css变量"
 tags: ["vue", "css"]
+category: "代码"
 ---
 
 ```js

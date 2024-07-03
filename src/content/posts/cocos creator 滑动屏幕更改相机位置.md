@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "cocos creator 滑动屏幕更改相机位置"
 tags: ["cocos creator"]
+category: "代码"
 ---
 
 ```ts

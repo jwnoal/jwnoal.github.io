@@ -4,6 +4,7 @@ published: 2023-12-12
 draft: false
 description: "cocos creator tween动画"
 tags: ["cocos creator"]
+category: "代码"
 ---
 
 cocos creator 在 tween 运动中加入到对象池的时候，再次展示是 tween 动画未停止，可以使用 stopAllByTarget 停止

@@ -4,6 +4,7 @@ published: 2024-04-28
 draft: false
 description: "vite vue3使用unocss"
 tags: ["vite css unocss"]
+category: "代码"
 ---
 
 ### 安装 unocss

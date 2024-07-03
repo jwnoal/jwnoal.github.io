@@ -4,6 +4,7 @@ published: 2024-01-15
 draft: false
 description: "uniapp 支付宝授权登录（提现）"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 [云插件地址：https://ext.dcloud.net.cn/plugin?id=13888](https://ext.dcloud.net.cn/plugin?id=13888)

@@ -4,6 +4,7 @@ published: 2024-01-09
 draft: false
 description: "使用picgo上传图片到七牛云"
 tags: ["picgo"]
+category: "工具"
 ---
 
 下载地址[https://github.com/Molunerfinn/PicGo/releases](https://github.com/Molunerfinn/PicGo/releases)

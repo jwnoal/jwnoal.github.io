@@ -4,6 +4,7 @@ published: 2023-12-08
 draft: false
 description: "uniapp 检测是否有qq,有则拉起QQ并跳转聊天页面，无则下载"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 ```js

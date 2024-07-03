@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "cocos creator 快速替换所有字体"
 tags: ["cocos creator"]
+category: "代码"
 ---
 
 1. 首先将带系统字体的 label 拉出 prefab 将 prefab 放进代码编辑器

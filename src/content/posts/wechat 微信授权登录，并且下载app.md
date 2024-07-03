@@ -4,6 +4,7 @@ published: 2023-12-07
 draft: false
 description: "wechat 微信授权登录，并且下载app"
 tags: ["wechat"]
+category: "代码"
 ---
 
 1. 引入 微信 jssdk

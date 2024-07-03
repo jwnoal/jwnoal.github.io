@@ -4,6 +4,7 @@ published: 2023-11-04
 draft: false
 description: "astro博客新增评论系统waline"
 tags: ["astro"]
+category: "代码"
 ---
 
 [文档地址：https://waline.js.org/guide/get-started/](https://waline.js.org/guide/get-started/)

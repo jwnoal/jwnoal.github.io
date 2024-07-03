@@ -4,6 +4,7 @@ published: 2023-11-03
 draft: false
 description: "uniapp开发的微信小程序获取头像昵称"
 tags: ["uniapp", "微信小程序"]
+category: "代码"
 ---
 
 自 2022 年 10 月 25 日 24 时后，用户头像昵称获取规则将进行如下调整：  

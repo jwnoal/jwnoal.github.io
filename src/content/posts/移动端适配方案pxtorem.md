@@ -4,6 +4,7 @@ published: 2024-06-17
 draft: false
 description: "移动端适配方案pxtorem"
 tags: ["h5"]
+category: "代码"
 ---
 
 ```shell

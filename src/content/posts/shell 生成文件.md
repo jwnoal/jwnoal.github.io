@@ -4,6 +4,7 @@ published: 2023-12-08
 draft: false
 description: "shell"
 tags: ["shell"]
+category: "代码"
 ---
 
 ```shell

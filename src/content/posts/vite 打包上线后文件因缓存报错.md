@@ -4,6 +4,7 @@ published: 2024-05-21
 draft: false
 description: "vite 打包上线后文件因缓存报错"
 tags: ["vue", "vite", "报错"]
+category: "代码"
 ---
 
 vite 打包上线后 html 文件会被缓存，而引用的文件则被改了 hash，导致报错

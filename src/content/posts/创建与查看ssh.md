@@ -4,6 +4,7 @@ published: 2023-11-18
 draft: false
 description: "创建与查看ssh"
 tags: ["ssh"]
+category: "代码"
 ---
 
 ### 查看 ssh 公钥

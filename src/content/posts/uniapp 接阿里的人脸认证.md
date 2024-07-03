@@ -4,6 +4,7 @@ published: 2023-12-14
 draft: false
 description: "uniapp 接阿里的人脸认证"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 [阿里云参考文档：https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/uniapp-integration-2](https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/uniapp-integration-2)

@@ -4,6 +4,7 @@ published: 2024-04-02
 draft: false
 description: "vue 滑动头部渐变背景"
 tags: ["vue"]
+category: "代码"
 ---
 
 ```vue

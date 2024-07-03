@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "NVM的使用"
 tags: ["nvm"]
+category: "代码"
 ---
 
 ## NVM 是什么?

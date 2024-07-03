@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "MessageBus EventBus 单例"
 tags: ["js"]
+category: "代码"
 ---
 
 MessageBus.ts

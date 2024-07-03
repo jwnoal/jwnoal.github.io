@@ -4,6 +4,7 @@ published: 2024-01-11
 draft: false
 description: "uniapp网页端使用pixi播放spine动画"
 tags: ["uniapp", "js", "pixi.js"]
+category: "代码"
 ---
 
 uniapp 和 h5 的 pixi 使用有些兼容性问题

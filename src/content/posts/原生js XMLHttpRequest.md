@@ -4,6 +4,7 @@ published: 2023-11-18
 draft: false
 description: "原生js XMLHttpRequest"
 tags: ["js"]
+category: "代码"
 ---
 
 ```

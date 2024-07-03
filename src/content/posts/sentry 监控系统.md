@@ -4,6 +4,7 @@ published: 2024-05-02
 draft: false
 description: "sentry 监控系统"
 tags: ["h5", "sentry", "监控系统"]
+category: "代码"
 ---
 
 ```shell

@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "vue 路由返回不刷新"
 tags: ["vue", "router"]
+category: "代码"
 ---
 
 router 路由配置 router/index.js

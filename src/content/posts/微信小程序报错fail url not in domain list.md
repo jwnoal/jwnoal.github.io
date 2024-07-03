@@ -4,6 +4,7 @@ published: 2023-11-04
 draft: false
 description: "微信小程序报错fail url not in domain list"
 tags: ["微信小程序", "uniapp"]
+category: "知识"
 ---
 
 开发环境没问题，上线之后发现小程序报错：fail url not in domain list

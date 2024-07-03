@@ -4,6 +4,7 @@ published: 2024-05-31
 draft: false
 description: "mac 使用adb"
 tags: ["mac"]
+category: "知识"
 ---
 
 ```shell

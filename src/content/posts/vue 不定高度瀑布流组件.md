@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "vue 不定高度瀑布流组件"
 tags: ["js", "vue"]
+category: "代码"
 ---
 
 市面上知道高度的瀑布流插件有很多，不定高度，动态加载的瀑布流插件比较少，根据项目需求，自己写了一个

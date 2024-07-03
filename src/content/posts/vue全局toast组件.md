@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "vue全局toast组件"
 tags: ["vue"]
+category: "代码"
 ---
 
 记一个全局 toast 组件

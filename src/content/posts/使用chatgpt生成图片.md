@@ -4,6 +4,7 @@ published: 2023-10-30
 draft: false
 description: "使用chatgpt生成图片"
 tags: ["AI"]
+category: "知识"
 ---
 
 [chatgpt](https://chat.openai.com/)

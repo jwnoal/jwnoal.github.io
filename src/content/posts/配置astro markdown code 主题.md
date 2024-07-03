@@ -4,6 +4,7 @@ published: 2023-10-16
 draft: false
 description: "配置astro markdown code 主题"
 tags: ["astro", "markdown", "Shiki"]
+category: "代码"
 ---
 
 在 astro.config.mjs 文件中配置 markdown

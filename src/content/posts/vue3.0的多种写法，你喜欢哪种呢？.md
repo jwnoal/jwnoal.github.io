@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "vue3.0的多种写法，你喜欢哪种呢？"
 tags: ["vue"]
+category: "代码"
 ---
 
 #### 第一种写法：

@@ -4,6 +4,7 @@ published: 2024-02-22
 draft: false
 description: "uniapp 遇到的问题"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 #### uni-swipe-action-item 报错

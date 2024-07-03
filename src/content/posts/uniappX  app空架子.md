@@ -4,6 +4,7 @@ published: 2024-05-25
 draft: false
 description: "uniappX app空架子"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 #### 创建 uniapp x 项目

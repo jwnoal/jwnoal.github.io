@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "CocosCreator 修改打包后的默认加载界面"
 tags: ["cocos creator"]
+category: "代码"
 ---
 
 以 web-mobile 发布网页端为例子

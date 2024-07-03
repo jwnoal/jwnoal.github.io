@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "移动端滑动穿透方案及demo"
 tags: ["h5", "js"]
+category: "代码"
 ---
 
 # 移动端滑动穿透方案及 demo

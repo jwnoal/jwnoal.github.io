@@ -4,6 +4,7 @@ published: 2024-01-15
 draft: false
 description: "uniapp 微信授权登录"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 [文档地址](https://zh.uniapp.dcloud.io/tutorial/app-oauth-weixin.html)

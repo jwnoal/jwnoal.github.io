@@ -4,6 +4,7 @@ published: 2023-12-21
 draft: false
 description: "移动端最新适配方案"
 tags: ["h5"]
+category: "代码"
 ---
 
 [参考博客](https://juejin.cn/post/7213537146362658875)

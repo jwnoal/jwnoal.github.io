@@ -4,6 +4,7 @@ published: 2024-06-02
 draft: false
 description: "vite vue3上线配置"
 tags: ["vite", "vue3"]
+category: "代码"
 ---
 
 vite.config.ts

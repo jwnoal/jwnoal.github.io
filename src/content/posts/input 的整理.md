@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "input 的整理"
 tags: ["h5", "input", "js"]
+category: "代码"
 ---
 
 #### input 设置长度

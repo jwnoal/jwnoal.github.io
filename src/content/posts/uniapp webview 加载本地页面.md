@@ -4,6 +4,7 @@ published: 2024-05-25
 draft: false
 description: "uniapp webview 加载本地页面"
 tags: ["uniapp"]
+category: "代码"
 ---
 
 uniapp 加载本地页面或者下载 cdn zip 包，解压加载

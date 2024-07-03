@@ -4,6 +4,7 @@ published: 2024-04-21
 draft: false
 description: "vue axios封装"
 tags: ["vue"]
+category: "代码"
 ---
 
 ```js

@@ -4,6 +4,7 @@ published: 2023-10-25
 draft: false
 description: "js的一些好用的库"
 tags: ["js"]
+category: "知识"
 ---
 
 ## Day.js

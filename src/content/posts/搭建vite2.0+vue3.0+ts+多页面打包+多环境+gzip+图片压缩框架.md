@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "搭建vite2.0+vue3.0+ts+多页面打包+多环境+gzip+图片压缩框架"
 tags: ["vite", "vue", "ts"]
+category: "代码"
 ---
 
 #### 首先安装 vite

@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "ts实现Window自定义方法不报错"
 tags: ["ts"]
+category: "代码"
 ---
 
 //index.d.ts

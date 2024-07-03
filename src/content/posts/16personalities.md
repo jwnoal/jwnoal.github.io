@@ -4,6 +4,7 @@ published: 2024-01-02
 draft: false
 description: "16personalities"
 tags: ["16personalities"]
+category: "工具"
 ---
 
 ### 16 种人格测试

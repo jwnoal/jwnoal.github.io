@@ -4,6 +4,7 @@ published: 2022-07-01
 draft: false
 description: "canvas实现刮奖效果"
 tags: ["js", "canvas"]
+category: "代码"
 ---
 
 ```js

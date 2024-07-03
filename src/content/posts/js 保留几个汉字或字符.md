@@ -4,6 +4,7 @@ published: 2023-12-14
 draft: false
 description: "js 保留几个汉字或字符"
 tags: ["js"]
+category: "代码"
 ---
 
 ```js
