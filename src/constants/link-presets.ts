@@ -15,4 +15,8 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
     name: i18n(I18nKey.archive),
     url: '/archive/',
   },
+  [LinkPreset.Fiction]: {
+    name: i18n(I18nKey.fiction),
+    url: '/archive/category/小说/',
+  },
 }

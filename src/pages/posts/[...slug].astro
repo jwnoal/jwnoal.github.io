@@ -15,10 +15,13 @@ import Waline from '../../components/vue/Waline.vue'
 import { profileConfig } from '../../config'
 import { formatDateToYYYYMMDD } from '../../utils/date-utils'
 
+
+
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
+    return (import.meta.env.PROD ? data.draft !== true : true)
   })
+  
   return blogEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -26,6 +29,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
+
 const { Content } = await entry.render()
 
 const { remarkPluginFrontmatter } = await entry.render()
@@ -121,7 +125,7 @@ const jsonLd = {
         <a href={getPostUrlBySlug(entry.data.prevSlug)} class="w-full font-bold overflow-hidden active:scale-95">
             {entry.data.prevSlug && <div class="btn-card rounded-2xl w-full h-[3.75rem] max-w-full px-4 flex items-center justify-end gap-4">
                 <div class="overflow-hidden transition overflow-ellipsis whitespace-nowrap max-w-[calc(100%_-_3rem)] text-black/75 dark:text-white/75">
-                    {entry.data.prevTitle}
+                    {entry.data.prevTitle}1
                 </div>
                 <Icon name="material-symbols:chevron-right-rounded" size={32} class="text-[var(--primary)]" />
             </div>}

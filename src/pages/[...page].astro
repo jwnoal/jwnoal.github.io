@@ -7,12 +7,17 @@ import {getPostUrlBySlug} from "../utils/url-utils";
 import {PAGE_SIZE} from "../constants/constants";
 import PostPage from "../components/PostPage.astro";
 
+
 export async function getStaticPaths({ paginate }) {
     const allBlogPosts = await getSortedPosts();
+    // console.log(post.category);
+    
+    // allBlogPosts = allBlogPosts.filter(post => categories.includes(post.category))
+
     return paginate(allBlogPosts, { pageSize: PAGE_SIZE });
 }
 
-const {page} = Astro.props;
+const {page,categories} = Astro.props;
 
 const len = page.data.length;
 

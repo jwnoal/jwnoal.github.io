@@ -5,6 +5,7 @@ export const zh_TW: Translation = {
   [Key.home]: '首頁',
   [Key.about]: '關於',
   [Key.archive]: '彙整',
+  [Key.fiction]: '小说',
 
   [Key.tags]: '標籤',
   [Key.categories]: '分類',
