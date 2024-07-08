@@ -3,7 +3,7 @@ title: "css 控制video control"
 published: 2024-06-13
 draft: false
 description: "css 控制video control"
-tags: ["h5"]
+tags: ["css"]
 category: "代码"
 ---
 
