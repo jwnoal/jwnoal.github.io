@@ -36,7 +36,12 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Home,
     LinkPreset.Archive,
     // LinkPreset.About,
-    LinkPreset.Fiction,
+    // LinkPreset.Fiction,
+    {
+      name: '友链',
+      url: 'https://pal.run', // Internal links should not include the base path, as it is automatically added
+      external: true, // Show an external link icon and will open in a new tab
+    },
     // {
     //   name: 'GitHub',
     //   url: 'https://github.com/saicaca/fuwari', // Internal links should not include the base path, as it is automatically added

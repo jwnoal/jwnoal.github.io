@@ -297,9 +297,23 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"css 自定义字体.md": {
+	id: "css 自定义字体.md";
+  slug: "css-自定义字体";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "electron 重新定义Menu(禁用刷新，缩放，打开控制台).md": {
 	id: "electron 重新定义Menu(禁用刷新，缩放，打开控制台).md";
   slug: "electron-重新定义menu禁用刷新缩放打开控制台";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"git 常用命令.md": {
+	id: "git 常用命令.md";
+  slug: "git-常用命令";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
@@ -377,6 +391,13 @@ declare module 'astro:content' {
 "matter.js实现重力小球.md": {
 	id: "matter.js实现重力小球.md";
   slug: "matterjs实现重力小球";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"pc 滚动条不占位.md": {
+	id: "pc 滚动条不占位.md";
+  slug: "pc-滚动条不占位";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
@@ -580,6 +601,13 @@ declare module 'astro:content' {
 "vue/vue 路由返回不刷新.md": {
 	id: "vue/vue 路由返回不刷新.md";
   slug: "vue/vue-路由返回不刷新";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"vue/vue3 使用swiper.md": {
+	id: "vue/vue3 使用swiper.md";
+  slug: "vue/vue3-使用swiper";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
@@ -836,6 +864,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"演唱会抢票.md": {
+	id: "演唱会抢票.md";
+  slug: "演唱会抢票";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "移动端最新适配方案pxtoviewport.md": {
 	id: "移动端最新适配方案pxtoviewport.md";
   slug: "移动端最新适配方案pxtoviewport";
@@ -853,6 +888,13 @@ declare module 'astro:content' {
 "移动端适配方案pxtorem.md": {
 	id: "移动端适配方案pxtorem.md";
   slug: "移动端适配方案pxtorem";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"自定义滚动条样式.md": {
+	id: "自定义滚动条样式.md";
+  slug: "自定义滚动条样式";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
