@@ -36,3 +36,7 @@ const iptShow = computed(() => {
 	return popup.value?.showPopup;
 });
 ```
+
+#### 测试环正常，在生产就不正常了
+因为测试环境有些权限可以跳过的，可以关闭调试面板试试
+生产环境可能需要配置白名单，比如图片上传需要配置uploadFile合法域名 （小程序后台/开发管理/服务器域名）
