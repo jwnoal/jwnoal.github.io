@@ -1,6 +1,6 @@
 ---
 title: "uniapp和unicloud实现小程序图片上传和删除"
-published: 2024-7-28
+published: 2024-07-28
 draft: false
 description: "uniapp和unicloud实现小程序图片上传和删除"
 tags: ["uniapp"]
@@ -105,5 +105,5 @@ exports.main = async (event, context) => {
 1. 需要在小程序后台设置域名白名单 开发管理/开发设置/服务器域名/uploadFile 合法域名和 downloadFile 合法域名。
 如果用的是 unicloud，登录 web 控制台，点击总览，找到内置云存储上传域名和内置云存储下载域名。
 
-2. unicloud 云存储设置 Referer 白名单。允许空Referer：关闭。
+2. unicloud 云存储设置 Referer 白名单。允许空Referer：关闭。（云存储/CDN流量报表及防刷设置）
 unicloud.dcloud.net.cn,servicewechat.com
