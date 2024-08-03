@@ -10,6 +10,7 @@ category: "代码"
 目的：想要实现小程序的每日打卡通知功能。
 
 ![](https://cdn.jiangwei.zone/blog/20240803122705.png)
+![](https://cdn.jiangwei.zone/blog/IMG_0381.PNG.JPG)
 
 #### 配置
 
