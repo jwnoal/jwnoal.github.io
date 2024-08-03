@@ -41,7 +41,7 @@ uniCloud/cloudfunctions/common/uni-config-center/uni-id/config.json
 }
 ```
 
-在uni-config-center目录下新建子目录uni-open-bridge, 新增 config.json，配置 dcloudAppid ，详情见下面的示例代码
+在 uni-config-center 目录下新建子目录 uni-open-bridge, 新增 config.json，配置 dcloudAppid ，详情见下面的示例代码
 uniCloud/cloudfunctions/common/uni-config-center/uni-open-bridge/config.json
 
 ```json
@@ -220,22 +220,21 @@ exports.main = async (event, context) => {
 
   console.log(res);
   const arr = [
-    "立志不坚，终不济事。——朱熹",
-    "凿不休则沟深，斧不止则薪多。——王充",
-    "只要功夫深，铁棒磨成针。—谚语",
-    "成功之因，在于不屈不挠。——荷兰俗语",
-    "所谓天才，就是努力的力量。——德怀特",
-    "耐心和恒心总会得到报酬的。——爱因斯坦",
-    "不经一翻彻骨寒，怎得梅花扑鼻香。——宋帆",
-    "最难做的事是把容易做的事持之以恒。——佚名",
-    "读不在三更五鼓，功只怕一曝十寒。——郭沫若",
-    "黑发不知勤学早，白首方恨读书迟。——颜真卿",
-    "道足以忘物之得春，志足以一气之盛衰。——苏轼",
-    "一日一钱，千日千钱，绳锯木断，水滴石穿。——班固",
-    "奋斗这一件事是自有人类以来天天不息的。——孙中山",
-    "日日行，不怕千万里；常常做，不怕千万事。——金樱",
-    "锲而舍之，朽木不折；锲而不舍，金石可镂。——荀况",
-    "不积跬步，无以至千里；不积小流，无以成江海。——荀子",
+    "立志不坚，终不济事。",
+    "凿不休则沟深，斧不止则薪多。",
+    "只要功夫深，铁棒磨成针。",
+    "成功之因，在于不屈不挠。",
+    "所谓天才，就是努力的力量。",
+    "耐心和恒心总会得到报酬的。",
+    "不经一翻彻骨寒，怎得梅花扑鼻香。",
+    "最难做的事是把容易做的事持之以恒。",
+    "读不在三更五鼓，功只怕一曝十寒。",
+    "黑发不知勤学早，白首方恨读书迟。",
+    "道足以忘物之得春，志足以一气之盛衰。",
+    "一日一钱，千日千钱，绳锯木断，水滴石穿。",
+    "奋斗这一件事是自有人类以来天天不息的。",
+    "日日行，不怕千万里；常常做，不怕千万事。",
+    "锲而舍之，朽木不折；锲而不舍，金石可镂。",
   ];
   const msg = arr[Math.floor(Math.random() * arr.length)];
   console.log(msg);
@@ -270,8 +269,18 @@ exports.main = async (event, context) => {
 
 注意：
 在此云函数目录运行 npm install moment
-设置定时：uniapp web 控制台-云函数/详情/定时器触发
 
+设置定时：uniapp web 控制台-云函数/详情/定时器触发
 ```js
 ["0 0/1 * * * ?"];
 ```
+
+```js
+// 发送文字大于20个字会报错
+result: {
+  errcode: 47003,
+  errmsg: 'argument invalid! data.thing3.value invalid rid: 66ae1a59-1fd52776-679954c5'
+}
+```
+
+如果云函数接口没有await,可能会发生测试环境有效，生产环境出问题的情况。
