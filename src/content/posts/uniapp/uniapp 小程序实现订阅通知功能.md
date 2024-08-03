@@ -1,6 +1,6 @@
 ---
 title: "uniapp 小程序实现订阅通知功能"
-published: 2024-07-28
+published: 2024-08-03
 draft: false
 description: "uniapp 小程序实现订阅通知功能"
 tags: ["uniapp"]
@@ -15,7 +15,7 @@ category: "代码"
 
 1. 首先需要在微信小程序公众后台，申请订阅消息模板
 2. uniCloud 配置
-   文档地址 [https://doc.dcloud.net.cn/uniCloud/uni-subscribemsg.html](https://doc.dcloud.net.cn/uniCloud/uni-subscribemsg.html)
+   文档地址 [https://doc.dcloud.net.cn/uniCloud/uni-subscribemsg.html](https://doc.dcloud.net.cn/uniCloud/uni-subscribemsg.html)  
    配置 uni-open-bridge
    文档地址 [https://doc.dcloud.net.cn/uniCloud/uni-open-bridge.html#uni-open-bridge%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B](https://doc.dcloud.net.cn/uniCloud/uni-open-bridge.html#uni-open-bridge%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B)
 
@@ -76,13 +76,83 @@ uniCloud/cloudfunctions/common/uni-config-center/uni-open-bridge/config.json
     <uni-icons type="notification-filled" size="24" color="#fff"></uni-icons>
     <text>{{ item.time }}</text>
   </view>
+
+  <!-- 一开始使用picker，后来发现change事件不能拉起订阅弹框，必须点击 -->
+  <uni-popup ref="popup2" class="popupbottom" type="bottom">
+    <div class="cont2">
+      <div class="h">
+        <div @click="cancel" class="red">取消</div>
+        <div @click="confirm" class="blue">确定</div>
+      </div>
+      <picker-view @change="bindChange" class="picker-view">
+        <picker-view-column>
+          <view class="item" v-for="(item, index) in hour" :key="index">{{
+            item
+          }}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class="item" v-for="(item, index) in minute" :key="index">{{
+            item
+          }}</view>
+        </picker-view-column>
+      </picker-view>
+    </div>
+  </uni-popup>
 </template>
+<style lang="scss" scoped>
+.popupbottom {
+  .cont2 {
+    background: #fff;
+    height: 500rpx;
+    margin-bottom: -68rpx;
+
+    .h {
+      display: flex;
+      justify-content: space-between;
+      padding: 30rpx 40rpx;
+
+      .blue {
+        color: #1d8acc;
+      }
+
+      .red {
+        color: red;
+      }
+    }
+  }
+
+  .picker-view {
+    width: 750rpx;
+    height: 400rpx;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+</style>
 ```
 
 2. 在事件中首先发送订阅事件，弹起弹框，让用户同意
 
 ```vue
 <script setup lang="ts">
+import { ref } from "vue";
+
+const hour = ref([]);
+const minute = ref([]);
+const popup2 = ref(null); //弹框
+const i = ref(); //获取点击的是哪个打卡按钮
+
+for (let i = 0; i < 24; i++) {
+  hour.value.push(i.toString().padStart(2, "0"));
+}
+for (let i = 0; i < 60; i++) {
+  minute.value.push(i.toString().padStart(2, "0"));
+}
+
 function laqi(index: number) {
   uni.showLoading();
   uni.getSetting({
@@ -271,6 +341,7 @@ exports.main = async (event, context) => {
 在此云函数目录运行 npm install moment
 
 设置定时：uniapp web 控制台-云函数/详情/定时器触发
+
 ```js
 ["0 0/1 * * * ?"];
 ```
@@ -283,4 +354,4 @@ result: {
 }
 ```
 
-如果云函数接口没有await,可能会发生测试环境有效，生产环境出问题的情况。
+如果云函数接口没有 await,可能会发生测试环境有效，生产环境出问题的情况。
