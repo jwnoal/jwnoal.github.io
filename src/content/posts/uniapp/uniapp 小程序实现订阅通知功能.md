@@ -355,4 +355,12 @@ result: {
 }
 ```
 
+```js
+// 需要重新订阅
+result: {
+  errcode: 43101,
+  errmsg: 'user refuse to accept the msg rid: 66bb66e4-101034a6-4ea10941'
+}
+```
+
 如果云函数接口没有 await,可能会发生测试环境有效，生产环境出问题的情况。
