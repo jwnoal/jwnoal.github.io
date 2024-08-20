@@ -63,3 +63,32 @@ git push [remote] --force
 ```zsh
 git reflog
 ```
+
+dev merge 到 test 过滤掉 dist 目录
+
+1. 在项目根目录下创建或编辑 .gitattributes 文件
+
+```zsh
+echo "dist merge=ours" > .gitattributes
+```
+
+2. 创建或编辑.git/config 文件：
+
+```zsh
+echo -e "[merge \"ours\"]\nname = \"Keep ours merge\"\ndriver = true" >> .git/config
+```
+
+```zsh
+# 确认 .gitattributes 文件内容
+cat .gitattributes
+# 输出应为：
+# dist merge=ours
+
+# 确认 .git/config 文件内容
+cat .git/config
+# 输出应包含：
+# [merge "ours"]
+# name = "Keep ours merge"
+# driver = true
+
+```

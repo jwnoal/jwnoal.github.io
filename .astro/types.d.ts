@@ -346,6 +346,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"input 数字框不显示箭头.md": {
+	id: "input 数字框不显示箭头.md";
+  slug: "input-数字框不显示箭头";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "input 的整理.md": {
 	id: "input 的整理.md";
   slug: "input-的整理";
@@ -430,6 +437,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"uniapp/uniapp setup 中写onload和onReachBottom.md": {
+	id: "uniapp/uniapp setup 中写onload和onReachBottom.md";
+  slug: "uniapp/uniapp-setup-中写onload和onreachbottom";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "uniapp/uniapp webview 加载本地页面.md": {
 	id: "uniapp/uniapp webview 加载本地页面.md";
   slug: "uniapp/uniapp-webview-加载本地页面";
@@ -447,6 +461,34 @@ declare module 'astro:content' {
 "uniapp/uniapp xcode安装ipa.md": {
 	id: "uniapp/uniapp xcode安装ipa.md";
   slug: "uniapp/uniapp-xcode安装ipa";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"uniapp/uniapp 使用unibest搭建项目框架.md": {
+	id: "uniapp/uniapp 使用unibest搭建项目框架.md";
+  slug: "uniapp/uniapp-使用unibest搭建项目框架";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"uniapp/uniapp 小程序使用unocss.md": {
+	id: "uniapp/uniapp 小程序使用unocss.md";
+  slug: "uniapp/uniapp-小程序使用unocss";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"uniapp/uniapp 小程序实现图片上传和删除.md": {
+	id: "uniapp/uniapp 小程序实现图片上传和删除.md";
+  slug: "uniapp/uniapp-小程序实现图片上传和删除";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"uniapp/uniapp 小程序实现订阅通知功能.md": {
+	id: "uniapp/uniapp 小程序实现订阅通知功能.md";
+  slug: "uniapp/uniapp-小程序实现订阅通知功能";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
@@ -573,6 +615,13 @@ declare module 'astro:content' {
 "vue/vue 不定高度瀑布流组件.md": {
 	id: "vue/vue 不定高度瀑布流组件.md";
   slug: "vue/vue-不定高度瀑布流组件";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"vue/vue 事件参数带even和自定义参数.md": {
+	id: "vue/vue 事件参数带even和自定义参数.md";
+  slug: "vue/vue-事件参数带even和自定义参数";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
