@@ -102,18 +102,17 @@ const siteLang = siteConfig.lang.replace('_', '-')
 				  media={favicon.theme && `(prefers-color-scheme: ${favicon.theme})`}
 			/>
 		))}
-		<script>
-			var _hmt = _hmt || [];
-			(function() {
-			  var hm = document.createElement("script");
-			  hm.src = "https://hm.baidu.com/hm.js?dafae3208c6450de98ebde2e72e8f684";
-			  var s = document.getElementsByTagName("script")[0]; 
-			  s.parentNode.insertBefore(hm, s);
-			})();
-			</script>
 			
 		<!-- Set the theme before the page is rendered to avoid a flash -->
 		<script define:vars={{DEFAULT_THEME: DEFAULT_THEME, LIGHT_MODE: LIGHT_MODE, DARK_MODE: DARK_MODE, AUTO_MODE: AUTO_MODE}}>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?dafae3208c6450de98ebde2e72e8f684";
+				var s = document.getElementsByTagName("script")[0]; 
+				s.parentNode.insertBefore(hm, s);
+			})();
+
 			const theme = localStorage.getItem('theme') || DEFAULT_THEME;
 			switch (theme) {
 				case LIGHT_MODE:
@@ -138,7 +137,8 @@ const siteLang = siteConfig.lang.replace('_', '-')
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
 		<style define:vars={{ configHue }}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
-
+		
+				
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"is-home": isHomePage, "enable-banner": enableBanner}]}>
 		<ParticlesBlog />
