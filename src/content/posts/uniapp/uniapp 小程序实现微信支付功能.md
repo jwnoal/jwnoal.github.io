@@ -55,7 +55,7 @@ category: "代码"
 			"secret": "", // 小程序的secret 小程序后台获取
 			"mchId": "", // 商户id 微信支付商户平台获取
 			"key": "", // v2的api key  微信支付商户平台自己设置的key
-			"pfx": fs.readFileSync(__dirname + '/wxpay/apiclient_cert.p12'), // v2需要用到的证书  证书是自己申请的，也在微信商户平台
+			"pfx": fs.readFileSync(__dirname + '/wxpay/apiclient_cert.p12'), // v2需要用到的证书  证书是自己申请的，也在微信商户平台，证书放到uni-config-center/uni-pay/wxpay目录下,pem不要删
 			"v3Key": "", // v3的api key
 			"appCertPath": path.join(__dirname, 'wxpay/apiclient_cert.pem'), // v3需要用到的证书
 			"appPrivateKeyPath": path.join(__dirname, 'wxpay/apiclient_key.pem'), // v3需要用到的证书
