@@ -6,6 +6,7 @@ description: "uniapp 小程序获取位置"
 tags: ["uniapp"]
 category: "代码"
 ---
+需要在 “小程序管理后台 -「开发」-「开发管理」-「接口设置」” 中完成权限申请；
 
 manifest.json
 
