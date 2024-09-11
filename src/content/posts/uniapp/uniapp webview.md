@@ -10,14 +10,8 @@ category: "代码"
 ```js
 <template>
 	<view style="background: #2b335e">
-		<web-view
-			ref="webView"
-			class="web"
-			:src="src"
-			style="background: #2b335e"
-			:webview-styles="webviewStyles"
-			@message="handleMessage"
-		></web-view>
+		<web-view ref="webView" class="web" :src="mySrc" @message="handleMessage"
+			:webview-styles="webviewStyles"></web-view>
 	</view>
 </template>
 
@@ -25,12 +19,13 @@ category: "代码"
 export default {
 	data() {
 		return {
-			currentWebview: null,
 			wv: null,
-			src: '',
-			webviewStyles: {
-				background: 'rgb(43 51 94)',
-			},
+				mySrc: '',
+				webviewStyles: {
+					progress: false,
+					top: uni.getSystemInfoSync().statusBarHeight,
+					height: uni.getSystemInfoSync().screenHeight - uni.getSystemInfoSync().statusBarHeight,
+				},
 		};
 	},
 	created() {
@@ -42,23 +37,23 @@ export default {
 	onLoad(options) {
 		console.log('===onLoad===');
 		if (options && options.url) {
-			this.src = options.url;
-			// this.$store.commit('setWebviewStatus', 1);
-			console.log('打开的页面是：', this.src);
+			this.mySrc = options.url;
+			console.log('打开的页面是：', this.mySrc);
 		}
 	},
 	onUnload() {
 		// this.$store.commit('setWebviewStatus', 0);
 	},
 	onReady() {
-		console.log('===onReady===');
-		// #ifdef APP-PLUS
-		this.currentWebview = this.$scope.$getAppWebview(); //此对象相当于html5plus里的plus.webview.currentWebview()。在uni-app里vue页面直接使用plus.webview.currentWebview()无效
-		setTimeout(() => {
-			this.wv = this.currentWebview.children()[0];
-			console.log('wv1', this.wv);
-		}, 200); //如果是页面初始化调用时，需要延时一下
-		// #endif
+		console.log("===onReady===");
+			// #ifdef APP-PLUS
+			this.currentWebview = this.$scope
+				.$getAppWebview();
+			setTimeout(() => {
+				this.wv = this.currentWebview.children()[0];
+				console.log("wv", this.wv);
+			}, 1000); //如果是页面初始化调用时，需要延时一下
+			// #endif
 	},
 	onShow() {
 		console.log('===onShow===');
@@ -73,8 +68,6 @@ export default {
 					return;
 				}
 			}
-			// console.log('evt.detail==>', evt.detail);
-			// console.log('wv2==>', this.wv);
 			const actionName = evt.detail.data[0].actionName;
 			const callBackFunctionName = evt.detail.data[0].callBackFunctionName;
 			const params = evt.detail.data[0].params;
@@ -87,7 +80,7 @@ export default {
 				case 'uni_openPage':
 					console.log('===', params.url)
 					uni.navigateTo({
-						url: '/pages/webview/subWebview?url=' + params.url,
+						url: '/pages/webview/subWebview?url=' + encodeURIComponent(params.url),
 					});
 					break;
 				case 'uni_request':
@@ -120,8 +113,19 @@ https://gitcode.net/dcloud/hello-uni-app-x/-/blob/alpha/hybrid/html/uni.webview.
 
 ```js
 import * as uni from "./uni.webview.1.5.4.js";
-uni.getEnv(function (res) {
-  console.log("当前环境：" + JSON.stringify(res));
+
+onMounted(() => {
+  nextTick(() => {
+    document.addEventListener("UniAppJSBridgeReady", function () {
+      console.log("UniAppJSBridgeReady");
+      (window as any).uni.webView.getEnv((res: any) => {
+        console.log("getEnv", res); // { plus: true }
+        if (res.plus) {
+        //   useGlobalStore().setUapp(true);
+        }
+      });
+    });
+  });
 });
 
 export const pMessage = (name, params) => {
