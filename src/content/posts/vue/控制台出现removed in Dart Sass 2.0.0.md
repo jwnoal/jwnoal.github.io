@@ -23,3 +23,25 @@ css: {
       },
 }
 ```
+
+或
+```js
+css: {
+    preprocessorOptions: {
+        scss: {
+            api: 'modern-compiler', // or 'modern'
+        },
+    },
+},
+```
+
+如果只想让弃用警告静音，可以使用silenceDeprecations选项：
+```js
+css: {
+    preprocessorOptions: {
+        scss: {
+            silenceDeprecations: ['legacy-js-api']
+        },
+    },
+},
+```
