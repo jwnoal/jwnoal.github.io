@@ -430,6 +430,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"ts 集合.md": {
+	id: "ts 集合.md";
+  slug: "ts-集合";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "ts实现Window自定义方法不报错.md": {
 	id: "ts实现Window自定义方法不报错.md";
   slug: "ts实现window自定义方法不报错";
@@ -486,9 +493,23 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"uniapp/uniapp 小程序实现微信支付功能.md": {
+	id: "uniapp/uniapp 小程序实现微信支付功能.md";
+  slug: "uniapp/uniapp-小程序实现微信支付功能";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "uniapp/uniapp 小程序实现订阅通知功能.md": {
 	id: "uniapp/uniapp 小程序实现订阅通知功能.md";
   slug: "uniapp/uniapp-小程序实现订阅通知功能";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"uniapp/uniapp 小程序获取位置.md": {
+	id: "uniapp/uniapp 小程序获取位置.md";
+  slug: "uniapp/uniapp-小程序获取位置";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
@@ -552,6 +573,13 @@ declare module 'astro:content' {
 "uniapp/unicloud 多表联查.md": {
 	id: "uniapp/unicloud 多表联查.md";
   slug: "uniapp/unicloud-多表联查";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"unity笔记.md": {
+	id: "unity笔记.md";
+  slug: "unity笔记";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
@@ -689,6 +717,20 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".mdx"] };
+"vue/控制台出现removed in Dart Sass 2.0.0.md": {
+	id: "vue/控制台出现removed in Dart Sass 2.0.0.md";
+  slug: "vue/控制台出现removed-in-dart-sass-200";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"websocket封装.md": {
+	id: "websocket封装.md";
+  slug: "websocket封装";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "wechat 微信授权登录，并且下载app.md": {
 	id: "wechat 微信授权登录，并且下载app.md";
   slug: "wechat-微信授权登录并且下载app";
@@ -769,6 +811,13 @@ declare module 'astro:content' {
 "各种工具网站.md": {
 	id: "各种工具网站.md";
   slug: "各种工具网站";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"在vscode中配置net core环境.md": {
+	id: "在vscode中配置net core环境.md";
+  slug: "在vscode中配置net-core环境";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
@@ -958,6 +1007,13 @@ declare module 'astro:content' {
 "节流与防抖.md": {
 	id: "节流与防抖.md";
   slug: "节流与防抖";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"花式console.md": {
+	id: "花式console.md";
+  slug: "花式console";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

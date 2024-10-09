@@ -1,9 +1,9 @@
 ---
-title: "在vscode中写c#"
+title: "在vscode中配置net core环境"
 published: 2024-10-08
 draft: false
-description: "在vscode中写c#"
-tags: ["c#"]
+description: "在vscode中配置net core环境"
+tags: ["unity"]
 category: "代码"
 ---
 
