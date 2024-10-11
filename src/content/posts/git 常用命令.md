@@ -9,6 +9,25 @@ category: "工具"
 
 文档地址：[https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 
+创建用户
+```zsh
+git config –global user.name "soymilk"
+git config –global user.email "soymilk@qq.com"
+```
+
+创建ssl
+```zsh
+# ED25519
+ssh-keygen -t ed25519 -C "soymilk@qq.com"
+# 或者：RSA
+ssh-keygen -o -t rsa -b 4096 -C "email@example.com"
+```
+
+查看ssl 公钥
+```zsh
+cat ~/.ssh/id_rsa.pub
+```
+
 新增远程仓库：
 
 ```zsh
