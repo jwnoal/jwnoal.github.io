@@ -68,7 +68,11 @@ cd ~/.ssh && cat id_rsa.pub >> authorized_keys
 
 ```
 
+
+
 如果本就有，记得要将公钥复制到 authorized_keys。
+
+github上放的是私钥 
 
 复制私钥到 secrets 时，需要在末尾多添加一个空行，否则会报错。 255。
 

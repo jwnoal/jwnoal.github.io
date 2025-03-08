@@ -11,8 +11,8 @@ category: "工具"
 
 创建用户
 ```zsh
-git config –global user.name "soymilk"
-git config –global user.email "soymilk@qq.com"
+git config -–global user.name "soymilk"
+git config -–global user.email "soymilk@qq.com"
 ```
 
 创建ssl
@@ -110,4 +110,16 @@ cat .git/config
 # name = "Keep ours merge"
 # driver = true
 
+```
+
+遇到kex_exchange_identification: Connection closed by remote host
+Connection closed by 127.0.0.1 port 7890
+致命错误：无法读取远程仓库。
+
+解决方案：修改~/.ssh/config文件，添加以下内容：
+``` sh
+Host github.com
+HostName ssh.github.com
+User git
+Port 443
 ```
